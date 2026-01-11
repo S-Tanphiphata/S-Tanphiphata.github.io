@@ -147,17 +147,17 @@ function initMobileNav() {
 function initActiveNavLinks() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const navbar = document.querySelector('.navbar');
     
     if (sections.length === 0 || navLinks.length === 0) return;
     
     window.addEventListener('scroll', function() {
         let current = '';
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            const navbar = document.querySelector('.navbar');
-            const navbarHeight = navbar ? navbar.offsetHeight : 0;
             
             // Check if section is in viewport
             if (window.pageYOffset >= sectionTop - navbarHeight - 100) {
