@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XRTV Case Study - Extended Reality Television by Sakdiphat Tanphiphatari">
+    <title>XRTV Case Study - Sakdiphat Tanphiphatari</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Additional styles for case study page */
+        .case-study {
+            padding-top: 80px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            transition: gap var(--transition-fast);
+        }
+        
+        .back-link:hover {
+            gap: 0.75rem;
+        }
+        
+        .case-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .case-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-primary);
+        }
+        
+        .case-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .case-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .case-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-primary);
+        }
+        
+        .case-section h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text-primary);
+        }
+        
+        .case-section p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .info-table {
+            background-color: var(--color-card-bg);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .info-row {
+            display: flex;
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid var(--color-bg);
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: var(--color-text-primary);
+            min-width: 150px;
+        }
+        
+        .info-value {
+            color: var(--color-text-secondary);
+        }
+        
+        .problem-statement {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .insights-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .insights-list li {
+            background-color: var(--color-card-bg);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .insights-list li::before {
+            content: "✓ ";
+            color: var(--color-accent);
+            font-weight: bold;
+            margin-right: var(--spacing-xs);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .feature-card {
+            background-color: var(--color-card-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .feature-desc {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .prototype-container {
+            background-color: var(--color-card-bg);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .prototype-placeholder {
+            background: linear-gradient(135deg, var(--color-bg), var(--color-card-bg));
+            border: 2px dashed var(--color-text-secondary);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            text-align: center;
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .architecture-diagram {
+            background-color: var(--color-bg);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: var(--spacing-md);
+            font-family: monospace;
+            font-size: 1rem;
+            color: var(--color-text-primary);
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .result-box {
+            background-color: var(--color-card-bg);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .result-box h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .result-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .result-box ul li {
+            padding: var(--spacing-xs) 0;
+            color: var(--color-text-secondary);
+            padding-left: var(--spacing-md);
+            position: relative;
+        }
+        
+        .result-box ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+        
+        .stat-highlight {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            margin: 0 0.25rem;
+        }
+        
+        .links-section {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        
+        .external-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            transition: all var(--transition-normal);
+        }
+        
+        .external-link:hover {
+            background-color: #5a3dd5;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        @media (max-width: 768px) {
+            .case-title {
+                font-size: 2rem;
+            }
+            
+            .info-row {
+                flex-direction: column;
+            }
+            
+            .info-label {
+                margin-bottom: var(--spacing-xs);
+            }
+            
+            .features-grid,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Tan</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <main class="case-study">
+        <div class="container">
+            <!-- Back Link -->
+            <a href="../index.html#projects" class="back-link">← Back to Portfolio</a>
+            
+            <!-- Header -->
+            <header class="case-header">
+                <h1 class="case-title">XRTV – Extended Reality Television</h1>
+                <p class="case-subtitle">Reimagining television history through Mixed Reality</p>
+            </header>
+
+            <!-- Overview Section -->
+            <section class="case-section">
+                <h2>Overview</h2>
+                <div class="info-table">
+                    <div class="info-row">
+                        <span class="info-label">Role:</span>
+                        <span class="info-value">UX Researcher & XR Developer</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Duration:</span>
+                        <span class="info-value">Semester 1, 2025</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Institution:</span>
+                        <span class="info-value">University of Melbourne</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Course:</span>
+                        <span class="info-value">INFO90009 – User Experience Design</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Tools:</span>
+                        <span class="info-value">Unity, Meta XR SDK, Figma, ESP32, Arduino</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Statement Section -->
+            <section class="case-section">
+                <h2>Problem Statement</h2>
+                <div class="problem-statement">
+                    "How might we support people in discovering overlooked forms of visual media while making learning about interface evolution accessible—even for XR beginners?"
+                </div>
+                <p>Television has evolved dramatically since the 1950s, from mechanical systems to digital smart TVs. However, most people are unaware of the rich history of TV interfaces and interaction design. This project explores how Mixed Reality can make learning about this evolution more engaging and accessible.</p>
+            </section>
+
+            <!-- Research Section -->
+            <section class="case-section">
+                <h2>Research</h2>
+                <p>We conducted comprehensive user research to understand how people interact with XR technology and what makes historical learning engaging.</p>
+                <p><span class="stat-highlight">7 Interviews</span> + <span class="stat-highlight">24 Surveys</span></p>
+                
+                <h3>Key Insights</h3>
+                <ul class="insights-list">
+                    <li>Users unfamiliar with XR need clear onboarding and intuitive controls</li>
+                    <li>Physical controls (knobs) create nostalgic connection and enhance engagement</li>
+                    <li>Learning through interaction is more effective than static content</li>
+                </ul>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="case-section">
+                <h2>Solution</h2>
+                <p>XRTV is a Mixed Reality application that lets users interact with historical television sets using both physical and gesture controls, creating an immersive learning experience.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎛️</div>
+                        <div class="feature-title">Knob Controls</div>
+                        <div class="feature-desc">Physical ESP32-powered dials for authentic retro TV interaction</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤲</div>
+                        <div class="feature-title">Gesture Control</div>
+                        <div class="feature-desc">Natural hand tracking for intuitive XR interaction</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <div class="feature-title">Learning Mode</div>
+                        <div class="feature-desc">Interactive timeline of TV evolution and interface design</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🥽</div>
+                        <div class="feature-title">MR Passthrough</div>
+                        <div class="feature-desc">Blend virtual TV with real environment for immersive experience</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prototype Section -->
+            <section class="case-section">
+                <h2>Prototype</h2>
+                <div class="prototype-container">
+                    <div class="prototype-placeholder">
+                        <p>[Figma Prototype Screenshots - Add your images here]</p>
+                    </div>
+                    <a href="https://www.figma.com/proto/hra7fA8tehBCS4SazPpiip/Television-MR?node-id=604-248&starting-point-node-id=604%3A248" target="_blank" rel="noopener noreferrer" class="external-link">
+                        View Interactive Figma Prototype →
+                    </a>
+                </div>
+            </section>
+
+            <!-- Technical Architecture Section -->
+            <section class="case-section">
+                <h2>Technical Architecture</h2>
+                <div class="architecture-diagram">
+                    <pre>
+┌─────────────────┐
+│   ESP32 Dials   │
+│  (Physical I/O) │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Unity Engine   │
+│  + Meta XR SDK  │
+└────────┬────────┘
+         │
+         ↓
+┌─────────────────┐
+│  Meta Quest     │
+│  MR Passthrough │
+└─────────────────┘
+                    </pre>
+                </div>
+                <p>The system integrates physical ESP32-powered dials that communicate with Unity via serial connection, while Meta XR SDK handles hand tracking and passthrough rendering for an immersive Mixed Reality experience.</p>
+            </section>
+
+            <!-- Results Section -->
+            <section class="case-section">
+                <h2>Results</h2>
+                <div class="results-grid">
+                    <div class="result-box">
+                        <h3>What Worked</h3>
+                        <ul>
+                            <li>Physical knob controls enhanced user engagement</li>
+                            <li>Passthrough MR created immersive learning environment</li>
+                            <li>Users successfully learned about TV evolution</li>
+                            <li>Intuitive gesture controls lowered barrier to entry</li>
+                        </ul>
+                    </div>
+                    <div class="result-box">
+                        <h3>Future Improvements</h3>
+                        <ul>
+                            <li>Expand TV model library with more historical models</li>
+                            <li>Add audio and visual feedback cues</li>
+                            <li>Create comprehensive onboarding tutorial</li>
+                            <li>Implement multiplayer learning experiences</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Links Section -->
+            <section class="case-section">
+                <h2>Links</h2>
+                <div class="links-section">
+                    <a href="https://github.com/S-Tanphiphata/INFO90009" target="_blank" rel="noopener noreferrer" class="external-link">
+                        💻 GitHub Repository
+                    </a>
+                    <a href="https://www.figma.com/proto/hra7fA8tehBCS4SazPpiip/Television-MR?node-id=604-248&starting-point-node-id=604%3A248" target="_blank" rel="noopener noreferrer" class="external-link">
+                        🎨 Figma Prototype
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Sakdiphat Tanphiphatari. All rights reserved.</p>
+            <p class="footer-credit">Designed & Built by Tan</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
