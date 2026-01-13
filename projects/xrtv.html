@@ -171,6 +171,112 @@
             margin-bottom: var(--spacing-md);
         }
         
+        .carousel-container {
+            position: relative;
+            background-color: var(--color-card-bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 66.67%;
+            background-color: #000;
+        }
+        
+        .carousel-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .carousel-controls {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border: 2px solid transparent;
+        }
+        
+        .carousel-dot.active {
+            background-color: var(--color-accent);
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .carousel-dot:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            z-index: 5;
+        }
+        
+        .carousel-nav:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .carousel-prev {
+            left: 15px;
+        }
+        
+        .carousel-next {
+            right: 15px;
+        }
+        
         .prototype-placeholder {
             background: linear-gradient(135deg, var(--color-bg), var(--color-card-bg));
             border: 2px dashed var(--color-text-secondary);
@@ -181,15 +287,65 @@
             margin-bottom: var(--spacing-md);
         }
         
-        .architecture-diagram {
-            background-color: var(--color-bg);
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            align-items: center;
             padding: var(--spacing-lg);
+            background-color: var(--color-bg);
+            border-radius: var(--radius-lg);
+        }
+        
+        .arch-component {
+            background-color: var(--color-card-bg);
+            padding: var(--spacing-md);
             border-radius: var(--radius-lg);
             text-align: center;
-            margin-bottom: var(--spacing-md);
-            font-family: monospace;
-            font-size: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border-left: 4px solid var(--color-primary);
+        }
+        
+        .arch-component:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .arch-component h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
             color: var(--color-text-primary);
+        }
+        
+        .arch-component p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            margin: 0.25rem 0;
+        }
+        
+        .arch-details {
+            font-size: 0.75rem !important;
+            font-style: italic;
+            margin-top: var(--spacing-xs);
+        }
+        
+        .arch-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+        
+        .arch-arrow {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            text-align: center;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .results-grid {
@@ -360,6 +516,7 @@
                 <ul class="insights-list">
                     <li>Users unfamiliar with XR need clear onboarding and intuitive controls</li>
                     <li>Physical controls (knobs) create nostalgic connection and enhance engagement</li>
+                    <li>Gesture control was engaging but unreliable due to sensitivity, overlapping gestures, and insufficient feedback or guidance.</li>
                     <li>Learning through interaction is more effective than static content</li>
                 </ul>
             </section>
@@ -393,15 +550,96 @@
                 </div>
             </section>
 
+            <!-- Sketches Section -->
+            <section class="case-section">
+                <h2>Sketches</h2>
+                <div class="sketches-container">
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-inner">
+                                <div class="carousel-slide active">
+                                    <img src="../images/xrtv/sketches/sk1.png" alt="Sketch 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk2.png" alt="Sketch 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk3.png" alt="Sketch 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk4.png" alt="Sketch 4">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk5.png" alt="Sketch 5">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk6.png" alt="Sketch 6">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk7.png" alt="Sketch 7">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk8.png" alt="Sketch 8">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/sketches/sk9.png" alt="Sketch 9">
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
+                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
+                            <div class="carousel-controls">
+                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+                                <button class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
+                                <button class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
+                                <button class="carousel-dot" data-slide="7" aria-label="Slide 8"></button>
+                                <button class="carousel-dot" data-slide="8" aria-label="Slide 9"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Early design explorations and wireframe sketches showing the iterative design process for the XRTV interface and user interactions.</p>
+                </div>
+            </section>
+
             <!-- Prototype Section -->
             <section class="case-section">
                 <h2>Prototype</h2>
                 <div class="prototype-container">
-                    <div class="prototype-placeholder">
-                        <p>[Figma Prototype Screenshots - Add your images here]</p>
+                    <div class="carousel-container">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-inner">
+                                <div class="carousel-slide active">
+                                    <img src="../images/xrtv/screenshots/sc1.png" alt="Screenshot 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/screenshots/sc2.png" alt="Screenshot 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/screenshots/sc3.png" alt="Screenshot 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/screenshots/sc4.png" alt="Screenshot 4">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="../images/xrtv/screenshots/sc5.png" alt="Screenshot 5">
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
+                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
+                            <div class="carousel-controls">
+                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://www.figma.com/proto/hra7fA8tehBCS4SazPpiip/Television-MR?node-id=604-248&starting-point-node-id=604%3A248" target="_blank" rel="noopener noreferrer" class="external-link">
-                        View Interactive Figma Prototype →
+                    <a href="https://www.youtube.com/watch?v=pf3NBIZumzY" target="_blank" rel="noopener noreferrer" class="external-link">
+                        View Unity Prototype →
                     </a>
                 </div>
             </section>
@@ -409,27 +647,29 @@
             <!-- Technical Architecture Section -->
             <section class="case-section">
                 <h2>Technical Architecture</h2>
-                <div class="architecture-diagram">
-                    <pre>
-┌─────────────────┐
-│   ESP32 Dials   │
-│  (Physical I/O) │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Unity Engine   │
-│  + Meta XR SDK  │
-└────────┬────────┘
-         │
-         ↓
-┌─────────────────┐
-│  Meta Quest     │
-│  MR Passthrough │
-└─────────────────┘
-                    </pre>
+                <div class="architecture-grid">
+                    <div class="arch-component arch-input">
+                        <div class="arch-icon">⚙️</div>
+                        <h3>ESP32 Dials</h3>
+                        <p>Physical I/O</p>
+                        <p class="arch-details">Serial communication via USB</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-component arch-engine">
+                        <div class="arch-icon">⚡</div>
+                        <h3>Unity Engine</h3>
+                        <p>+ Meta XR SDK</p>
+                        <p class="arch-details">Core processing layer</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-component arch-output">
+                        <div class="arch-icon">🥽</div>
+                        <h3>Meta Quest</h3>
+                        <p>MR Passthrough</p>
+                        <p class="arch-details">Display & interaction</p>
+                    </div>
                 </div>
-                <p>The system integrates physical ESP32-powered dials that communicate with Unity via serial connection, while Meta XR SDK handles hand tracking and passthrough rendering for an immersive Mixed Reality experience.</p>
+                <p style="margin-top: var(--spacing-lg);">The system integrates physical ESP32-powered dials that communicate with Unity via serial connection, while Meta XR SDK handles hand tracking and passthrough rendering for an immersive Mixed Reality experience.</p>
             </section>
 
             <!-- Results Section -->
@@ -465,7 +705,7 @@
                         💻 GitHub Repository
                     </a>
                     <a href="https://www.figma.com/proto/hra7fA8tehBCS4SazPpiip/Television-MR?node-id=604-248&starting-point-node-id=604%3A248" target="_blank" rel="noopener noreferrer" class="external-link">
-                        🎨 Figma Prototype
+                        📖 Visual Report
                     </a>
                 </div>
             </section>
@@ -481,5 +721,87 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Carousel functionality
+        class Carousel {
+            constructor(container) {
+                this.container = container;
+                this.slides = container.querySelectorAll('.carousel-slide');
+                this.dots = container.querySelectorAll('.carousel-dot');
+                this.prevBtn = container.querySelector('.carousel-prev');
+                this.nextBtn = container.querySelector('.carousel-next');
+                this.currentSlide = 0;
+                this.autoChangeInterval = 10000; // 10 seconds
+                this.autoChangeTimer = null;
+                
+                this.init();
+            }
+            
+            init() {
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                this.dots.forEach(dot => {
+                    dot.addEventListener('click', (e) => {
+                        this.goToSlide(parseInt(e.target.dataset.slide));
+                    });
+                });
+                
+                this.startAutoChange();
+                this.container.addEventListener('mouseenter', () => this.stopAutoChange());
+                this.container.addEventListener('mouseleave', () => this.startAutoChange());
+            }
+            
+            showSlide(n) {
+                this.slides.forEach(slide => slide.classList.remove('active'));
+                this.dots.forEach(dot => dot.classList.remove('active'));
+                
+                this.slides[n].classList.add('active');
+                this.dots[n].classList.add('active');
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+                this.showSlide(this.currentSlide);
+                this.resetAutoChange();
+            }
+            
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+                this.showSlide(this.currentSlide);
+                this.resetAutoChange();
+            }
+            
+            goToSlide(n) {
+                this.currentSlide = n;
+                this.showSlide(this.currentSlide);
+                this.resetAutoChange();
+            }
+            
+            startAutoChange() {
+                if (this.autoChangeTimer) return;
+                this.autoChangeTimer = setInterval(() => this.nextSlide(), this.autoChangeInterval);
+            }
+            
+            stopAutoChange() {
+                if (this.autoChangeTimer) {
+                    clearInterval(this.autoChangeTimer);
+                    this.autoChangeTimer = null;
+                }
+            }
+            
+            resetAutoChange() {
+                this.stopAutoChange();
+                this.startAutoChange();
+            }
+        }
+        
+        // Initialize carousel when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                new Carousel(carouselContainer);
+            }
+        });
+    </script>
 </body>
 </html>
