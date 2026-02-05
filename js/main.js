@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize active navigation highlighting
     initActiveNavLinks();
+    
+    // Initialize project card navigation
+    initProjectCardNavigation();
 });
 
 // ============================================
@@ -312,3 +315,43 @@ window.addEventListener('scroll', function() {
         navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
     }
 });
+
+// ============================================
+// Project Card Navigation
+// ============================================
+function initProjectCardNavigation() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        // Add click event to navigate to project page
+        card.addEventListener('click', function(e) {
+            // Find the project link within the card
+            const projectLink = this.querySelector('.project-link');
+            
+            if (projectLink) {
+                // Prevent if clicking on the link itself (to avoid double navigation)
+                if (e.target === projectLink || projectLink.contains(e.target)) {
+                    return;
+                }
+                
+                // Navigate to the project page
+                window.location.href = projectLink.getAttribute('href');
+            }
+        });
+        
+        // Add keyboard accessibility - allow Enter and Space keys
+        card.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const projectLink = this.querySelector('.project-link');
+                if (projectLink) {
+                    window.location.href = projectLink.getAttribute('href');
+                }
+            }
+        });
+        
+        // Make card focusable for keyboard navigation
+        card.setAttribute('role', 'button');
+        card.setAttribute('tabindex', '0');
+    });
+}
