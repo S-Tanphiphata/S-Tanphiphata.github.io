@@ -4,13 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lights Out - Game Dev Project</title>
+    <script>
+        (function () {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/lightsout.css">
 </head>
-<body>
+<body class="lightsout-page">
     <!-- Navigation -->
-    <nav style="background: #333; padding: 15px; text-align: center;">
-        <a href="../index.html" style="color: #fff; text-decoration: none; font-size: 1.1em;">← Back to Portfolio</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Tan</a>
+            <div class="nav-end">
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="../docs/Sakdiphat_Resume_UX.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                </ul>
+                <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </nav>
 
     <!-- Project Header -->
@@ -29,32 +67,32 @@
     <!-- Overview Section -->
     <div class="section">
         <h2>📋 Overview</h2>
-        <div class="snapshot" style="background: #f9f9f9; border-left-color: #667eea; margin: 0 0 30px 0;">
-            <div style="margin-bottom: 15px;">
-                <strong style="color: #333;">Role:</strong> Game Developer
+        <div class="snapshot snapshot--overview">
+            <div class="overview-row">
+                <strong>Role:</strong> Game Developer
             </div>
-            <div style="margin-bottom: 15px;">
-                <strong style="color: #333;">Duration:</strong> Semester 2, 2024
+            <div class="overview-row">
+                <strong>Duration:</strong> Semester 2, 2024
             </div>
-            <div style="margin-bottom: 15px;">
-                <strong style="color: #333;">Institution:</strong> University of Melbourne
+            <div class="overview-row">
+                <strong>Institution:</strong> University of Melbourne
             </div>
-            <div style="margin-bottom: 15px;">
-                <strong style="color: #333;">Course:</strong> COMP30019 – Graphics and Interaction
+            <div class="overview-row">
+                <strong>Course:</strong> COMP30019 – Graphics and Interaction
             </div>
-            <div style="margin-bottom: 15px;">
-                <strong style="color: #333;">Engine:</strong> Unity with WebGL
+            <div class="overview-row">
+                <strong>Engine:</strong> Unity with WebGL
             </div>
-            <div style="margin-bottom: 15px;">
-                <strong style="color: #333;">Tools:</strong> Unity, C#, Git, Jira, Confluence, Discord
+            <div class="overview-row">
+                <strong>Tools:</strong> Unity, C#, Git, Jira, Confluence, Discord
             </div>
-            <div>
-                <strong style="color: #333;">Team Members:</strong>
-                <ul style="list-style: none; padding: 0; margin: 10px 0 0 0;">
-                    <li style="margin: 5px 0;">• Sakdiphat Tanphiphatari</li>
-                    <li style="margin: 5px 0;">• Acalapati Priyatama</li>
-                    <li style="margin: 5px 0;">• Don Lam Nguyen</li>
-                    <li style="margin: 5px 0;">• Duc Hang Giang Vu</li>
+            <div class="overview-row">
+                <strong>Team Members:</strong>
+                <ul class="overview-team-list">
+                    <li>• Sakdiphat Tanphiphatari</li>
+                    <li>• Acalapati Priyatama</li>
+                    <li>• Don Lam Nguyen</li>
+                    <li>• Duc Hang Giang Vu</li>
                 </ul>
             </div>
         </div>
@@ -62,7 +100,7 @@
 
     <!-- Snapshot Section -->
     <div class="snapshot">
-        <h2>📸 About this game (snapshots)</h2>
+        <h2>📸 About this game</h2>
         <ul>
             <li><strong>Genre:</strong> Survival-Crafting with Eerie Atmosphere</li>
             <li><strong>Setting:</strong> A perpetual nighttime forest where darkness drains your sanity</li>
@@ -124,5 +162,8 @@
             <p class="footer-credit">Designed & Built by Tan</p>
         </div>
     </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

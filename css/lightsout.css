@@ -33,16 +33,21 @@
 }
 
 .snapshot {
-    background: #f5f5f5;
+    background: var(--color-card-bg);
     border-left: 5px solid #ff6b6b;
     padding: 30px;
     margin: 40px 0;
     border-radius: 4px;
 }
 
+.snapshot--overview {
+    border-left-color: var(--color-primary);
+    margin: 0 0 30px 0;
+}
+
 .snapshot h2 {
     margin-top: 0;
-    color: #333;
+    color: var(--color-text-primary);
 }
 
 .snapshot ul {
@@ -52,7 +57,7 @@
 
 .snapshot li {
     margin: 8px 0;
-    color: #555;
+    color: var(--color-text-secondary);
 }
 
 .section {
@@ -65,7 +70,7 @@
 
 .section h2 {
     font-size: 2em;
-    color: #333;
+    color: var(--color-text-primary);
     margin-bottom: 20px;
     border-bottom: 2px solid #ff6b6b;
     padding-bottom: 10px;
@@ -74,7 +79,7 @@
 .section p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #555;
+    color: var(--color-text-secondary);
     margin-bottom: 20px;
 }
 
@@ -85,7 +90,7 @@
 .section li {
     margin: 10px 0;
     font-size: 1.05em;
-    color: #666;
+    color: var(--color-text-secondary);
 }
 
 .contribution-box {
@@ -99,6 +104,32 @@
     color: #856404;
 }
 
+[data-theme="dark"] .contribution-box {
+    background: #2a2618;
+    border-color: #c9a227;
+    color: #e8d9a0;
+}
+
+.overview-row {
+    margin-bottom: 15px;
+    color: var(--color-text-secondary);
+}
+
+.overview-row strong {
+    color: var(--color-text-primary);
+}
+
+.overview-team-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.overview-team-list li {
+    margin: 5px 0;
+    color: var(--color-text-secondary);
+}
+
 .screenshot-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -109,12 +140,16 @@
 .screenshot-gallery img {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
     transition: transform 0.3s ease;
 }
 
 .screenshot-gallery img:hover {
     transform: scale(1.05);
+}
+
+.lightsout-page {
+    padding-top: 60px;
 }
 
 @media (max-width: 768px) {
