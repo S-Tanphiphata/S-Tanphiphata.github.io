@@ -70,7 +70,7 @@
 .info-row {
     display: flex;
     padding: var(--spacing-sm) 0;
-    border-bottom: 1px solid var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .info-row:last-child {
@@ -415,7 +415,7 @@
 }
 
 .external-link:hover {
-    background-color: #5a3dd5;
+    background-color: var(--color-primary-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }

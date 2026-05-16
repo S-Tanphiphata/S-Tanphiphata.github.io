@@ -309,11 +309,8 @@ function initActiveNavLinks() {
 // ============================================
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 0) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
-    }
+    if (!navbar) return;
+    navbar.classList.toggle('navbar--scrolled', window.scrollY > 0);
 });
 
 // ============================================

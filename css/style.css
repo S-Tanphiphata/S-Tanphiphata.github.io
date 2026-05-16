@@ -2,14 +2,23 @@
    CSS Custom Properties (Color Palette)
    ============================================ */
 :root {
+    color-scheme: light;
     /* Colors */
     --color-primary: #6B4EE6;
+    --color-primary-hover: #5a3dd5;
     --color-secondary: #4EA8E6;
     --color-accent: #00D9C4;
     --color-bg: #F8F9FA;
     --color-card-bg: #FFFFFF;
     --color-text-primary: #1A1A2E;
     --color-text-secondary: #6C757D;
+    --color-border: #E8EAED;
+    --color-on-primary: #FFFFFF;
+    --color-footer-bg: #1A1A2E;
+    --color-footer-text: #FFFFFF;
+    --color-toggle-bg: #F0F2F5;
+    --color-toggle-border: #DDE1E8;
+    --color-toggle-icon: #1A1A2E;
     
     /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -37,6 +46,27 @@
     --transition-slow: 0.5s ease;
 }
 
+[data-theme="dark"] {
+    color-scheme: dark;
+    --color-primary: #8B6FF0;
+    --color-primary-hover: #9B7FFF;
+    --color-secondary: #6BB8F0;
+    --color-accent: #2EE8D6;
+    --color-bg: #12141C;
+    --color-card-bg: #1A1D29;
+    --color-text-primary: #F0F2F5;
+    --color-text-secondary: #A8B0BF;
+    --color-border: #2A2F3F;
+    --color-footer-bg: #0A0C10;
+    --color-footer-text: #F0F2F5;
+    --color-toggle-bg: #242938;
+    --color-toggle-border: #3A4155;
+    --color-toggle-icon: #F0F2F5;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
 /* ============================================
    Reset & Base Styles
    ============================================ */
@@ -57,6 +87,7 @@ body {
     background-color: var(--color-bg);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 img {
@@ -95,7 +126,7 @@ ul {
     background-color: var(--color-card-bg);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
-    transition: box-shadow var(--transition-normal);
+    transition: box-shadow var(--transition-normal), background-color var(--transition-fast);
 }
 
 .navbar .container {
@@ -104,6 +135,17 @@ ul {
     align-items: center;
     padding-top: var(--spacing-sm);
     padding-bottom: var(--spacing-sm);
+    gap: var(--spacing-sm);
+}
+
+.nav-end {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.navbar--scrolled {
+    box-shadow: var(--shadow-md);
 }
 
 .logo {
@@ -160,6 +202,53 @@ ul {
     height: 3px;
     background-color: var(--color-text-primary);
     transition: all var(--transition-normal);
+}
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--color-toggle-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-toggle-bg);
+    color: var(--color-toggle-icon);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-primary);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.theme-toggle__icon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle__icon--sun {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+    display: block;
 }
 
 /* ============================================
@@ -302,7 +391,7 @@ ul {
 }
 
 .btn-primary:hover {
-    background-color: #5a3dd5;
+    background-color: var(--color-primary-hover);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -389,7 +478,7 @@ section {
 }
 
 .highlight-item {
-    background: white;
+    background: var(--color-card-bg);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     border: 2px solid rgba(107, 78, 230, 0.1);
@@ -622,8 +711,8 @@ section {
    Footer
    ============================================ */
 .footer {
-    background-color: var(--color-text-primary);
-    color: white;
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
     padding: var(--spacing-md) 0;
     text-align: center;
 }
@@ -783,6 +872,10 @@ section {
     
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-end {
+        gap: 0.5rem;
     }
     
     .nav-menu {
