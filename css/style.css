@@ -702,7 +702,28 @@ section {
 }
 
 .contact-icon {
-    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contact-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: filter var(--transition-fast);
+}
+
+[data-theme="dark"] .contact-icon--themed img {
+    filter: brightness(0) invert(1);
+}
+
+.contact-item:hover .contact-icon img {
+    filter: brightness(0) invert(1);
 }
 
 .contact-label {
