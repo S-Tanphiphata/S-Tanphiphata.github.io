@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromatic Wizard - Game Dev Project</title>
+    <script>
+        (function () {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chromatic-wizard.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body class="chromatic-wizard-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">Tan</a>
+            <div class="nav-end">
+                <ul class="nav-menu">
+                    <li><a href="../index.html#about" class="nav-link">About</a></li>
+                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="../docs/Sakdiphat_Resume_UX.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                </ul>
+                <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <div class="project-header">
+        <h1>🌈 Chromatic Wizard</h1>
+        <p>A Top-Down Color-Magic Wave Shooter</p>
+    </div>
+
+    <!-- Game Embed -->
+    <div class="game-embed">
+        <iframe frameborder="0" src="https://itch.io/embed-upload/18012772?color=3f2832" allowfullscreen="" width="1280" height="740">
+            <a href="https://lostgaia.itch.io/chromatic-wizard">Play Chromatic Wizard on itch.io</a>
+        </iframe>
+    </div>
+
+    <!-- Overview Section -->
+    <div class="section">
+        <h2>📋 Overview</h2>
+        <div class="snapshot snapshot--overview">
+            <div class="overview-row">
+                <strong>Role:</strong> Solo Developer (design, code, art &amp; audio)
+            </div>
+            <div class="overview-row">
+                <strong>Event:</strong> Godot Wild Jam #91
+            </div>
+            <div class="overview-row">
+                <strong>Duration:</strong> March 14–23, 2026
+            </div>
+            <div class="overview-row">
+                <strong>Theme:</strong> Theft
+            </div>
+            <div class="overview-row">
+                <strong>Engine:</strong> Godot 4
+            </div>
+            <div class="overview-row">
+                <strong>Genre:</strong> Top-down 2D wave shooter
+            </div>
+            <div class="overview-row">
+                <strong>Play it:</strong> <a href="https://lostgaia.itch.io/chromatic-wizard" target="_blank" rel="noopener noreferrer">lostgaia.itch.io/chromatic-wizard</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snapshot Section -->
+    <div class="snapshot">
+        <h2>📸 About this game</h2>
+        <ul>
+            <li><strong>Genre:</strong> Top-down 2D shooting</li>
+            <li><strong>Setting:</strong> A wizard wielding color-based magical projectiles</li>
+            <li><strong>Main Goal:</strong> Endure successive enemy waves for as long as you can</li>
+            <li><strong>Core Loop:</strong> Fight enemies → Absorb their color → Grow your damage → Survive the next wave</li>
+            <li><strong>Key Mechanic:</strong> RGB value <em>is</em> damage — absorb enemies' colors to increase your damage and reduce their resistance</li>
+            <li><strong>Theme Tie-in:</strong> Built for the jam theme "Theft" — you literally steal the enemies' colors to power up</li>
+        </ul>
+    </div>
+
+    <!-- Core Gameplay Section -->
+    <div class="section">
+        <h2>🎮 Core Gameplay (What the Player Does)</h2>
+        <p>
+            In Chromatic Wizard, you play a spellcaster whose magic is made of pure color. Every projectile carries an RGB value, and that value is its damage. Enemies arrive in relentless waves, each carrying colors of their own. Instead of simply blasting through them, you can steal their color — absorbing it to boost your own damage while weakening the resistance of foes that share that hue. The result is a fast, escalating loop where reading the color of the battlefield matters as much as your aim.
+        </p>
+        <ul>
+            <li><strong>Color-as-Damage Combat:</strong> Your projectiles deal damage based on their RGB value, so the color you carry directly shapes how hard you hit</li>
+            <li><strong>Color Absorption:</strong> Steal enemies' colors to increase your damage and reduce their resistance — the theme "Theft" in mechanic form</li>
+            <li><strong>Wave Survival:</strong> Endure successive enemy waves that grow tougher over time</li>
+            <li><strong>Strategic Targeting:</strong> Prioritise which colors to absorb to counter the enemies in front of you</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Sakdiphat Tanphiphatari. All rights reserved.</p>
+            <p class="footer-credit">Designed & Built by Tan</p>
+        </div>
+    </footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
