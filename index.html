@@ -13,8 +13,9 @@
             }
         })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Favicon placeholder - add your favicon here -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
@@ -24,8 +25,8 @@
             <a href="#" class="logo">Tan</a>
             <div class="nav-end">
                 <ul class="nav-menu">
+                    <li><a href="#projects" class="nav-link">Work</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                     <li><a href="docs/Sakdiphat_Resume_UX.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </ul>
@@ -56,162 +57,168 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-background">
-            <div class="interactive-bg"></div>
-            <canvas id="particle-canvas"></canvas>
-        </div>
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="hero-word">Designing</span>
-                    <span class="hero-word">Experiences</span>
-                    <span class="hero-word highlight">What People Love</span>
-                </h1>
-                <p class="hero-subtitle">Sakdiphat (Tan) Tanphiphatari</p>
-                <p class="hero-subtitle">UX Researcher, Interaction Designer & Game Developer</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm Tan, a UX researcher and interaction designer based in Melbourne. I combine user research with hands-on prototyping to create meaningful experiences from mixed reality apps to games.</p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🔍</span>
-                            <h4>Research-Driven</h4>
-                            <p>User interviews & testing inform every decision</p>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🎨</span>
-                            <h4>Hands-On Design</h4>
-                            <p>Prototyping from wireframes to interactive demos</p>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">🚀</span>
-                            <h4>End-to-End</h4>
-                            <p>From concept through deployment and iteration</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills">
-                    <h3>Skills & Expertise</h3>
-                    <div class="skills-grid">
-                        <span class="skill-tag">User Research</span>
-                        <span class="skill-tag">Interaction Design</span>
-                        <span class="skill-tag">Prototyping (Figma)</span>
-                        <span class="skill-tag">Unity Development</span>
-                        <span class="skill-tag">Mixed Reality (XR)</span>
-                        <span class="skill-tag">Usability Testing</span>
-                        <span class="skill-tag">Arduino/ESP32</span>
-                        <span class="skill-tag">User Interviews</span>
-                        <span class="skill-tag">Game Design</span>
-                    </div>
+                <p class="hero-eyebrow">Sakdiphat (Tan) Tanphiphatari</p>
+                <h1 class="hero-title">Designing experiences <em>people love.</em></h1>
+                <p class="hero-lede">UX researcher, interaction designer and game developer based in Melbourne.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View my work</a>
+                    <a href="#contact" class="text-link">Get in touch
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="work">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            
-            <!-- UX & Design Projects -->
-            <div class="projects-subsection">
-                <h3 class="subsection-title">HCI & UX Projects</h3>
-                <div class="projects-grid">
-                    <!-- XRTV Project Card -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/thumbnails/thn01.png" alt="XRTV – Extended Reality Television" class="project-thumbnail">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">XRTV – Extended Reality Television</h3>
-                            <p class="project-description">Reimagining television history through Mixed Reality experiences. A prototype blending retro TV interaction with XR technology.</p>
-                            <div class="project-tags">
-                                <span class="tag">UX Research</span>
-                                <span class="tag">Mixed Reality</span>
-                                <span class="tag">Unity</span>
-                                <span class="tag">ShapeXR</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">ESP32</span>
-                            </div>
-                            <a href="projects/xrtv.html" class="project-link">View Case Study →</a>
-                        </div>
-                    </div>
+            <header class="section-head">
+                <p class="section-kicker">Selected work</p>
+                <h2 class="section-title">Projects</h2>
+            </header>
 
-                    <!-- StudentSwap Project Card -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/thumbnails/thn02.png" alt="StudentSwap – Student Items Exchange Platform" class="project-thumbnail">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">StudentSwap</h3>
-                            <p class="project-description">A peer-to-peer platform enabling students to request and sell items. Designed to solve affordability and flexibility challenges.</p>
-                            <div class="project-tags">
-                                <span class="tag">UX Research</span>
-                                <span class="tag">Platform Design</span>
-                                <span class="tag">Figma</span>
-                                <span class="tag">User Testing</span>
-                                <span class="tag">Mobile First</span>
+            <!-- HCI & UX Projects -->
+            <div class="work-group">
+                <h3 class="work-group__title"><span class="work-group__index">01</span>HCI &amp; UX</h3>
+                <ol class="work-list">
+                    <li>
+                        <a href="projects/xrtv.html" class="work-item">
+                            <div class="work-item__media">
+                                <img src="images/thumbnails/thn01.png" alt="XRTV – Extended Reality Television" loading="lazy">
                             </div>
-                            <a href="projects/studentswap.html" class="project-link">View Case Study →</a>
-                        </div>
-                    </div>
-                </div>
+                            <div class="work-item__body">
+                                <h4 class="work-item__title">XRTV – Extended Reality Television</h4>
+                                <p class="work-item__desc">Reimagining television history through Mixed Reality experiences. A prototype blending retro TV interaction with XR technology.</p>
+                                <ul class="work-item__tags">
+                                    <li>UX Research</li>
+                                    <li>Mixed Reality</li>
+                                    <li>Unity</li>
+                                    <li>ShapeXR</li>
+                                    <li>Figma</li>
+                                    <li>ESP32</li>
+                                </ul>
+                                <span class="work-item__cta">Read case study
+                                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects/studentswap.html" class="work-item">
+                            <div class="work-item__media">
+                                <img src="images/thumbnails/thn02.png" alt="StudentSwap – Student Items Exchange Platform" loading="lazy">
+                            </div>
+                            <div class="work-item__body">
+                                <h4 class="work-item__title">StudentSwap</h4>
+                                <p class="work-item__desc">A peer-to-peer platform enabling students to request and sell items. Designed to solve affordability and flexibility challenges.</p>
+                                <ul class="work-item__tags">
+                                    <li>UX Research</li>
+                                    <li>Platform Design</li>
+                                    <li>Figma</li>
+                                    <li>User Testing</li>
+                                    <li>Mobile First</li>
+                                </ul>
+                                <span class="work-item__cta">Read case study
+                                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
             </div>
 
             <!-- Game Development Projects -->
-            <div class="projects-subsection">
-                <h3 class="subsection-title">Game Development Projects</h3>
-                <div class="projects-grid">
-                    <!-- Lights Out Project Card -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/thumbnails/thng01.png" alt="Lights Out – Survival-Crafting Game" class="project-thumbnail">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Lights Out</h3>
-                            <p class="project-description">A survival-crafting game set in perpetual darkness. Navigate an eerie forest, gather resources, and light up the map while managing your sanity before the darkness consumes you.</p>
-                            <div class="project-tags">
-                                <span class="tag">Game Design</span>
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">WebGL</span>
-                                <span class="tag">Survival Game</span>
+            <div class="work-group">
+                <h3 class="work-group__title"><span class="work-group__index">02</span>Game Development</h3>
+                <ol class="work-list">
+                    <li>
+                        <a href="projects/lightsout.html" class="work-item">
+                            <div class="work-item__media">
+                                <img src="images/thumbnails/thng01.png" alt="Lights Out – Survival-Crafting Game" loading="lazy">
                             </div>
-                            <a href="projects/lightsout.html" class="project-link">View Project →</a>
-                        </div>
-                    </div>
+                            <div class="work-item__body">
+                                <h4 class="work-item__title">Lights Out</h4>
+                                <p class="work-item__desc">A survival-crafting game set in perpetual darkness. Navigate an eerie forest, gather resources, and light up the map while managing your sanity before the darkness consumes you.</p>
+                                <ul class="work-item__tags">
+                                    <li>Game Design</li>
+                                    <li>Unity</li>
+                                    <li>C#</li>
+                                    <li>WebGL</li>
+                                    <li>Survival Game</li>
+                                </ul>
+                                <span class="work-item__cta">View project
+                                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="projects/chromatic-wizard.html" class="work-item">
+                            <div class="work-item__media">
+                                <img src="images/thumbnails/Chromatic Wizard Thumbnail.png" alt="Chromatic Wizard – Color-Magic Wave Shooter" loading="lazy">
+                            </div>
+                            <div class="work-item__body">
+                                <h4 class="work-item__title">Chromatic Wizard</h4>
+                                <p class="work-item__desc">A top-down 2D wave shooter where color is your weapon. Steal enemies' colors to raise your RGB-based damage and break their resistance, and survive as long as you can. Built for Godot Wild Jam #91.</p>
+                                <ul class="work-item__tags">
+                                    <li>Game Design</li>
+                                    <li>Godot 4</li>
+                                    <li>Game Jam</li>
+                                    <li>2D Shooter</li>
+                                    <li>WebGL</li>
+                                </ul>
+                                <span class="work-item__cta">View project
+                                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Chromatic Wizard Project Card -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/thumbnails/Chromatic Wizard Thumbnail.png" alt="Chromatic Wizard – Color-Magic Wave Shooter" class="project-thumbnail">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Chromatic Wizard</h3>
-                            <p class="project-description">A top-down 2D wave shooter where color is your weapon. Steal enemies' colors to raise your RGB-based damage and break their resistance, and survive as long as you can. Built for Godot Wild Jam #91.</p>
-                            <div class="project-tags">
-                                <span class="tag">Game Design</span>
-                                <span class="tag">Godot 4</span>
-                                <span class="tag">Game Jam</span>
-                                <span class="tag">2D Shooter</span>
-                                <span class="tag">WebGL</span>
-                            </div>
-                            <a href="projects/chromatic-wizard.html" class="project-link">View Project →</a>
-                        </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <header class="section-head">
+                <p class="section-kicker">About</p>
+                <h2 class="section-title">Hi, I'm Tan.</h2>
+            </header>
+            <div class="about-body">
+                <p class="about-lead">I'm a UX researcher and interaction designer based in Melbourne. I combine user research with hands-on prototyping to create meaningful experiences, from mixed reality apps to games.</p>
+
+                <dl class="principles">
+                    <div class="principles__row">
+                        <dt>Research-driven</dt>
+                        <dd>User interviews and testing inform every decision.</dd>
                     </div>
-                </div>
+                    <div class="principles__row">
+                        <dt>Hands-on design</dt>
+                        <dd>Prototyping from wireframes to interactive demos.</dd>
+                    </div>
+                    <div class="principles__row">
+                        <dt>End-to-end</dt>
+                        <dd>From concept through deployment and iteration.</dd>
+                    </div>
+                </dl>
+
+                <h3 class="skills-title">Skills &amp; expertise</h3>
+                <ul class="skills-list">
+                    <li>User Research</li>
+                    <li>User Interviews</li>
+                    <li>Usability Testing</li>
+                    <li>Interaction Design</li>
+                    <li>Prototyping (Figma)</li>
+                    <li>Mixed Reality (XR)</li>
+                    <li>Unity Development</li>
+                    <li>Game Design</li>
+                    <li>Arduino / ESP32</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -219,34 +226,34 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-text">I'm always interested in hearing about new projects and opportunities.</p>
-                <div class="contact-links">
-                    <a href="mailto:sakdiphattan@gmail.com" class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span class="contact-label">sakdiphattan@gmail.com</span>
+            <header class="section-head">
+                <p class="section-kicker">Contact</p>
+                <h2 class="section-title">Let's build something together.</h2>
+            </header>
+            <p class="contact-text">I'm always interested in hearing about new projects and opportunities.</p>
+            <a href="mailto:sakdiphattan@gmail.com" class="contact-email">sakdiphattan@gmail.com</a>
+            <ul class="contact-links">
+                <li>
+                    <a href="https://www.linkedin.com/in/sakdiphat-tanphiphatari/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" viewBox="0 0 382 382" aria-hidden="true"><path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472L341.91,330.654z"/></svg>LinkedIn
                     </a>
-                    <a href="https://www.linkedin.com/in/sakdiphat-tanphiphatari/" target="_blank" rel="noopener noreferrer" class="contact-item">
-                        <span class="contact-icon">
-                            <img src="images/icons/linkedin.svg" alt="" aria-hidden="true">
-                        </span>
-                        <span class="contact-label">LinkedIn</span>
+                </li>
+                <li>
+                    <a href="https://github.com/S-Tanphiphata" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" viewBox="84 7399 20 20" aria-hidden="true"><path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"/></svg>GitHub
                     </a>
-                    <a href="https://github.com/S-Tanphiphata" target="_blank" rel="noopener noreferrer" class="contact-item">
-                        <span class="contact-icon contact-icon--themed">
-                            <img src="images/icons/github-142.svg" alt="" aria-hidden="true">
-                        </span>
-                        <span class="contact-label">GitHub</span>
+                </li>
+                <li>
+                    <a href="https://lostgaia.itch.io/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M 16 5 C 12.748 5 8.3121094 5.0508594 7.4121094 5.1308594 C 6.4021094 5.7368594 4.4028125 8.0309531 4.3828125 8.6269531 L 4.3828125 9.6269531 C 4.3828125 10.889953 5.5657188 12 6.6367188 12 C 7.9197187 12 8.9902344 10.929969 8.9902344 9.6679688 C 8.9902344 10.929969 10.0305 12 11.3125 12 C 12.6055 12 13.605469 10.930969 13.605469 9.6679688 C 13.605469 10.929969 14.695281 12 15.988281 12 L 16.009766 12 C 17.302766 12 18.392578 10.930969 18.392578 9.6679688 C 18.392578 10.929969 19.402547 12 20.685547 12 C 21.968547 12 23.009766 10.930969 23.009766 9.6679688 C 23.009766 10.929969 24.080281 12 25.363281 12 C 26.434281 12 27.615234 10.889953 27.615234 9.6269531 L 27.615234 8.6269531 C 27.595234 8.0309531 25.595938 5.7368594 24.585938 5.1308594 C 21.443938 5.0198594 19.252 5 16 5 z M 13.550781 11.742188 C 12.497781 13.552188 9.8523125 13.573906 8.8203125 11.753906 C 8.1903125 12.845906 6.7642969 13.267547 6.1542969 13.060547 C 5.9762969 14.959547 5.8534844 24.70875 7.1464844 26.34375 C 10.943484 27.22875 21.164516 27.20975 24.853516 26.34375 C 26.348516 24.81975 26.013703 14.821547 25.845703 13.060547 C 25.235703 13.267547 23.809453 12.845906 23.189453 11.753906 C 22.146453 13.573906 19.501219 13.552188 18.449219 11.742188 C 18.124219 12.332187 17.367 13.109375 16 13.109375 C 14.997 13.148375 14.051781 12.607187 13.550781 11.742188 z M 11.419922 14 C 12.219922 14 12.950078 14.000469 13.830078 14.980469 C 15.280078 14.830469 16.719922 14.830469 18.169922 14.980469 C 19.059922 14.010469 19.780078 14.009766 20.580078 14.009766 C 23.160078 14.009766 23.780937 17.819609 24.710938 21.099609 C 25.550938 24.149609 24.429062 24.230469 23.039062 24.230469 C 20.969062 24.150469 19.820313 22.650625 19.820312 21.140625 C 17.890313 21.460625 14.809688 21.580625 12.179688 21.140625 C 12.179688 22.650625 11.030938 24.150469 8.9609375 24.230469 C 7.5709375 24.230469 6.4490625 24.149609 7.2890625 21.099609 C 8.2190625 17.799609 8.8399219 14.009766 11.419922 14.009766 L 11.419922 14 z M 16 16.876953 C 16 16.876953 14.306 18.439375 14 18.984375 L 15.107422 18.943359 L 15.107422 19.910156 C 15.107422 19.968156 15.926 19.917969 16 19.917969 C 16.447 19.934969 16.892578 19.951156 16.892578 19.910156 L 16.892578 18.943359 L 18 18.984375 C 17.694 18.438375 16 16.876953 16 16.876953 z"/></svg>itch.io
                     </a>
-                    <a href="https://lostgaia.itch.io/" target="_blank" rel="noopener noreferrer" class="contact-item">
-                        <span class="contact-icon contact-icon--themed">
-                            <img src="images/icons/itch-io.svg" alt="" aria-hidden="true">
-                        </span>
-                        <span class="contact-label">itch.io</span>
+                </li>
+                <li>
+                    <a href="docs/Sakdiphat_Resume_UX.pdf" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon icon--stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Resume
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -254,7 +261,7 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; <span id="year"></span> Sakdiphat Tanphiphatari. All rights reserved.</p>
-            <p class="footer-credit">Designed & Built by Tan</p>
+            <p class="footer-credit">Designed &amp; Built by Tan</p>
         </div>
     </footer>
 
