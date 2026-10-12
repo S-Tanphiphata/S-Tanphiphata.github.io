@@ -22,9 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize active navigation highlighting
     initActiveNavLinks();
-    
-    // Initialize project card navigation
-    initProjectCardNavigation();
 });
 
 // ============================================
@@ -45,27 +42,45 @@ function initParticleAnimation() {
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let particles = [];
     let animationFrameId;
-    
+    let particleRGB = '11, 61, 145';
+
+    // Particle color follows the theme (--particle-rgb in style.css)
+    function readParticleColor() {
+        const value = getComputedStyle(document.documentElement).getPropertyValue('--particle-rgb').trim();
+        if (value) particleRGB = value;
+    }
+
+    readParticleColor();
+    new MutationObserver(function() {
+        readParticleColor();
+        if (reduceMotion) drawFrame();
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
     // Set canvas size
     function resizeCanvas() {
         canvas.width = canvas.offsetWidth;
         canvas.height = canvas.offsetHeight;
     }
-    
+
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    
+    window.addEventListener('resize', function() {
+        resizeCanvas();
+        createParticles();
+        if (reduceMotion) drawFrame();
+    });
+
     // Particle class
     class Particle {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
-            this.speedX = Math.random() * 2 - 1;
-            this.speedY = Math.random() * 2 - 1;
-            this.opacity = Math.random() * 0.5 + 0.2;
+            this.size = Math.random() * 1.5 + 1;
+            this.speedX = (Math.random() * 2 - 1) * 0.5;
+            this.speedY = (Math.random() * 2 - 1) * 0.5;
+            this.opacity = Math.random() * 0.4 + 0.2;
         }
         
         update() {
@@ -80,7 +95,7 @@ function initParticleAnimation() {
         }
         
         draw() {
-            ctx.fillStyle = `rgba(107, 78, 230, ${this.opacity})`;
+            ctx.fillStyle = `rgba(${particleRGB}, ${this.opacity})`;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -107,7 +122,7 @@ function initParticleAnimation() {
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
                 if (distance < 150) {
-                    ctx.strokeStyle = `rgba(107, 78, 230, ${0.1 * (1 - distance / 150)})`;
+                    ctx.strokeStyle = `rgba(${particleRGB}, ${0.18 * (1 - distance / 150)})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
@@ -118,28 +133,35 @@ function initParticleAnimation() {
         }
     }
     
+    // Draw a single static frame
+    function drawFrame() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(particle => particle.draw());
+        drawConnections();
+    }
+
+    // Users who prefer reduced motion get the network without movement
+    if (reduceMotion) {
+        drawFrame();
+        return;
+    }
+
     // Animation loop
     function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        particles.forEach(particle => {
-            particle.update();
-            particle.draw();
-        });
-        
-        drawConnections();
+        particles.forEach(particle => particle.update());
+        drawFrame();
         animationFrameId = requestAnimationFrame(animate);
     }
-    
+
     animate();
-    
+
     // Handle mouse movement for particle interaction
     document.addEventListener('mousemove', (e) => {
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
         const heroRect = canvas.getBoundingClientRect();
-        
-        if (mouseY >= heroRect.top && mouseY <= heroRect.bottom) {
+        const mouseX = e.clientX - heroRect.left;
+        const mouseY = e.clientY - heroRect.top;
+
+        if (mouseY >= 0 && mouseY <= heroRect.height) {
             particles.forEach(particle => {
                 const dx = mouseX - particle.x;
                 const dy = mouseY - particle.y;
@@ -191,7 +213,7 @@ function initSmoothScroll() {
                 const navbarHeight = navbar ? navbar.offsetHeight : 0;
                 
                 // Scroll to target with offset
-                const targetPosition = target.offsetTop - navbarHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 16;
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -219,9 +241,11 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     // Observe elements for scroll animations
     const animatedElements = document.querySelectorAll(
-        '.project-card, .about-content, .contact-content, .skills'
+        '.work-item, .about-grid, .contact .container'
     );
     
     animatedElements.forEach(element => {
@@ -312,43 +336,3 @@ window.addEventListener('scroll', function() {
     if (!navbar) return;
     navbar.classList.toggle('navbar--scrolled', window.scrollY > 0);
 });
-
-// ============================================
-// Project Card Navigation
-// ============================================
-function initProjectCardNavigation() {
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach(card => {
-        // Add click event to navigate to project page
-        card.addEventListener('click', function(e) {
-            // Find the project link within the card
-            const projectLink = this.querySelector('.project-link');
-            
-            if (projectLink) {
-                // Prevent if clicking on the link itself (to avoid double navigation)
-                if (e.target === projectLink || projectLink.contains(e.target)) {
-                    return;
-                }
-                
-                // Navigate to the project page
-                window.location.href = projectLink.getAttribute('href');
-            }
-        });
-        
-        // Add keyboard accessibility - allow Enter and Space keys
-        card.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                const projectLink = this.querySelector('.project-link');
-                if (projectLink) {
-                    window.location.href = projectLink.getAttribute('href');
-                }
-            }
-        });
-        
-        // Make card focusable for keyboard navigation
-        card.setAttribute('role', 'button');
-        card.setAttribute('tabindex', '0');
-    });
-}

@@ -13,18 +13,19 @@
         })();
     </script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/studentswap.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/case-study.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
-<body>
+<body class="project-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="logo">Tan</a>
             <div class="nav-end">
                 <ul class="nav-menu">
+                    <li><a href="../index.html#projects" class="nav-link">Work</a></li>
                     <li><a href="../index.html#about" class="nav-link">About</a></li>
-                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
                     <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
                     <li><a href="../docs/Sakdiphat_Resume_UX.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </ul>
@@ -53,291 +54,254 @@
         </div>
     </nav>
 
-    <!-- Case Study Content -->
-    <main class="case-study">
-        <div class="container">
-            <!-- Back Link -->
-            <a href="../index.html#projects" class="back-link">← Back to Portfolio</a>
-            
-            <!-- Header -->
-            <header class="case-header">
-                <h1 class="case-title">StudentSwap</h1>
-                <p class="case-subtitle">A Platform for Student Items Exchange</p>
-            </header>
+    <main>
+        <!-- Header -->
+        <header class="cs-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    All work
+                </a>
+                <p class="cs-kicker">Case study · HCI &amp; UX</p>
+                <h1 class="cs-title">StudentSwap</h1>
+                <p class="cs-lede">A Platform for Student Items Exchange</p>
 
-            <!-- Interactive Prototype Section -->
-            <section class="case-section">
-                <h2>Interactive Prototype</h2>
-                <div class="prototype-container">
+                <!-- Overview -->
+                <dl class="cs-meta">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>UX Researcher &amp; Designer</dd>
+                    </div>
+                    <div>
+                        <dt>Duration</dt>
+                        <dd>Semester 2, 2024</dd>
+                    </div>
+                    <div>
+                        <dt>Institution</dt>
+                        <dd>University of Melbourne</dd>
+                    </div>
+                    <div>
+                        <dt>Course</dt>
+                        <dd>INFO90007 – Social Computing</dd>
+                    </div>
+                    <div>
+                        <dt>Tools</dt>
+                        <dd>Figma, User Research, Prototyping</dd>
+                    </div>
+                    <div>
+                        <dt>Team Members</dt>
+                        <dd>
+                            <ul>
+                                <li>Sakdiphat Tanphiphatari</li>
+                                <li>Phuc Quang Anh Nguyen</li>
+                                <li>Thanh Hoang Nguyen</li>
+                                <li>Joe Ruben Seegatz</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </header>
+
+        <!-- Interactive Prototype -->
+        <section class="cs-cover" aria-label="Interactive Prototype">
+            <div class="container">
+                <div class="cs-embed">
                     <iframe
-                        class="prototype-embed"
-                        src="https://embed.figma.com/proto/Rlnpz060BZyXsmag760gGL/INFO90007---Social-Computing-A3?node-id=1583-5433&p=f&scaling=min-zoom&content-scaling=fixed&page-id=1583%3A3015&starting-point-node-id=1583%3A5433&hide-ui=1&embed-host=share"
+                        src="https://embed.figma.com/proto/Rlnpz060BZyXsmag760gGL/INFO90007---Social-Computing-A3?node-id=1583-5433&amp;p=f&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=1583%3A3015&amp;starting-point-node-id=1583%3A5433&amp;hide-ui=1&amp;embed-host=share"
                         allowfullscreen
                         loading="lazy"
                         title="StudentSwap Figma Prototype">
                     </iframe>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Overview Section -->
-            <section class="case-section">
-                <h2>Overview</h2>
-                <div class="info-table">
-                    <div class="info-row">
-                        <span class="info-label">Role:</span>
-                        <span class="info-value">UX Researcher & Designer</span>
+        <div class="container project-layout">
+            <aside class="toc" aria-label="Contents">
+                <p class="toc__title">Contents</p>
+                <ol>
+                    <li><a href="#problem">Problem Statement</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#mindmap">Mindmap</a></li>
+                    <li><a href="#sketches">Sketches</a></li>
+                    <li><a href="#wireframes">Wireframes</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#evaluation">Observational Techniques</a></li>
+                    <li><a href="#results">Results</a></li>
+                </ol>
+            </aside>
+
+            <div class="project-body">
+                <!-- Problem Statement -->
+                <section id="problem" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">01</span>
+                        <h2>Problem Statement</h2>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Duration:</span>
-                        <span class="info-value">Semester 2, 2024</span>
+                    <blockquote class="cs-quote">"How might we enable university students to safely and confidently trade their unwanted personal belongings, while also providing an avenue for students in need to acquire new items at little to no cost, reducing the stress of accumulating unnecessary items?"</blockquote>
+                    <p>University students often face challenges finding items they need from people they trust. Online platforms like Facebook Marketplace are often prone to scams and fraudulent activities.</p>
+                </section>
+
+                <!-- Solution -->
+                <section id="solution" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">02</span>
+                        <h2>Solution</h2>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Institution:</span>
-                        <span class="info-value">University of Melbourne</span>
+                    <p>StudentSwap addresses this by offering an exclusive marketplace for buying, renting, and selling other items to verified students. Our core functionalities include categorised listings, real-time notifications, and a unique request feature that allows students to post items or need requests, especially when urgent.</p>
+                    <div class="cs-features">
+                        <div class="cs-feature">
+                            <h3>Buy, Rent &amp; Sell</h3>
+                            <p>Exclusive marketplace for buying, renting, and selling items to verified students</p>
+                        </div>
+                        <div class="cs-feature">
+                            <h3>Verified Community</h3>
+                            <p>Trust system with student verification for secure peer-to-peer transactions</p>
+                        </div>
+                        <div class="cs-feature">
+                            <h3>Real-time Notifications</h3>
+                            <p>Instant alerts for new listings, requests, and transaction updates</p>
+                        </div>
+                        <div class="cs-feature">
+                            <h3>Request Feature</h3>
+                            <p>Post item needs or availability requests when urgent or specific items needed</p>
+                        </div>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Course:</span>
-                        <span class="info-value">INFO90007 – Social Computing</span>
+                </section>
+
+                <!-- Mindmap -->
+                <section id="mindmap" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">03</span>
+                        <h2>Mindmap</h2>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Tools:</span>
-                        <span class="info-value">Figma, User Research, Prototyping</span>
+                    <p>We used a mind map to quickly ideate and explore the app's potential features, participants, challenges, and objectives without delving into technical details.</p>
+                    <figure class="cs-figure">
+                        <a href="../images/studentswap/Mind Map.jpg" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/studentswap/Mind Map.jpg" alt="StudentSwap mind map of features, participants, challenges and objectives" loading="lazy">
+                        </a>
+                    </figure>
+                </section>
+
+                <!-- Sketches -->
+                <section id="sketches" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">04</span>
+                        <h2>Sketches</h2>
                     </div>
-                    <div class="info-row">
-                        <span class="info-label">Team Members:</span>
-                        <span class="info-value">
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li>• Sakdiphat Tanphiphatari</li>
-                                <li>• Phuc Quang Anh Nguyen</li>
-                                <li>• Thanh Hoang Nguyen</li>
-                                <li>• Joe Ruben Seegatz</li>
+                    <p>Hand-drawn sketches were created independently by team members to visualize core features and user flows, followed by collaborative discussions to align our vision and establish a foundation for wireframing.</p>
+                    <figure class="gallery" data-gallery style="--ratio: 16 / 10;">
+                        <div class="gallery__stage">
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk01.png" alt="Sketch 1" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk02.png" alt="Sketch 2" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk03.png" alt="Sketch 3" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk04.png" alt="Sketch 4" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk05.png" alt="Sketch 5" loading="lazy"></div>
+                        </div>
+                    </figure>
+                </section>
+
+                <!-- Wireframes -->
+                <section id="wireframes" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">05</span>
+                        <h2>Wireframes with Information Architecture</h2>
+                    </div>
+                    <p>We developed mid-fidelity wireframes in Figma based on our sketches, focusing on central features while establishing a foundation for high-fidelity prototyping and design consistency across screens. Also with information architecture to ensure a logical and user-friendly navigation structure.</p>
+                    <figure class="gallery" data-gallery style="--ratio: 16 / 10;">
+                        <div class="gallery__stage">
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf01.png" alt="Wireframe 1" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf02.png" alt="Wireframe 2" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf03.png" alt="Wireframe 3" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf04.png" alt="Wireframe 4" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf05.png" alt="Wireframe 5" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf06.png" alt="Wireframe 6" loading="lazy"></div>
+                        </div>
+                    </figure>
+                </section>
+
+                <!-- Screenshots -->
+                <section id="screenshots" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">06</span>
+                        <h2>Screenshots</h2>
+                    </div>
+                    <figure class="gallery" data-gallery style="--ratio: 16 / 9;">
+                        <div class="gallery__stage">
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/1_Onboarding.png" alt="Prototype 1 - Onboarding" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/2_Verification.png" alt="Prototype 2 - Verification" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/3_Home.png" alt="Prototype 3 - Home" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/4_Request page.png" alt="Prototype 4 - Request Page" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/5_Request form.png" alt="Prototype 5 - Request Form" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/6_chat.png" alt="Prototype 6 - Chat" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/7_profile.png" alt="Prototype 7 - Profile" loading="lazy"></div>
+                        </div>
+                    </figure>
+                    <div class="cs-actions">
+                        <a href="https://www.figma.com/proto/Rlnpz060BZyXsmag760gGL/INFO90007---Social-Computing-A3?node-id=1583-5433&amp;p=f&amp;t=9g1HlNO28322XE1i-0&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=1583%3A3015&amp;starting-point-node-id=1583%3A5433" target="_blank" rel="noopener noreferrer" class="cs-button cs-button--primary">
+                            View Prototype on Figma
+                            <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Observational Techniques -->
+                <section id="evaluation" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">07</span>
+                        <h2>Observational Techniques</h2>
+                    </div>
+                    <p>We evaluated the system using Think Aloud and Post-Task Walkthrough methods to capture real-time user insights and understand design challenges:</p>
+                    <ol class="cs-rows">
+                        <li><span><strong>Think Aloud:</strong> Participants verbalised their thoughts and decision-making processes while interacting with the system, allowing us to capture real-time insights into user navigation and confusion points.</span></li>
+                        <li><span><strong>Post-Task Walkthrough:</strong> After completing tasks, participants discussed their recent actions to articulate their reasoning and help us understand why certain design elements were challenging.</span></li>
+                    </ol>
+                </section>
+
+                <!-- Results -->
+                <section id="results" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">08</span>
+                        <h2>Results</h2>
+                    </div>
+                    <div class="cs-outcomes">
+                        <div class="cs-outcome">
+                            <h3>What Worked</h3>
+                            <ul>
+                                <li>Pretty intuitive interface</li>
+                                <li>Easy to make a request to other students</li>
+                                <li>Addresses the need for a safe and trustworthy marketplace</li>
+                                <li>Create a more efficient and responsive student marketplace</li>
                             </ul>
-                        </span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Problem Statement Section -->
-            <section class="case-section">
-                <h2>Problem Statement</h2>
-                <div class="problem-statement">
-                    "How might we enable university students to safely and confidently trade their unwanted personal belongings, while also providing an avenue for students in need to acquire new items at little to no cost, reducing the stress of accumulating unnecessary items?"
-                </div>
-                <p>University students often face challenges finding items they need from people they trust. Online
-platforms like Facebook Marketplace are often prone to scams and fraudulent activities.</p>
-                
-            </section>
-
-            <!-- Solution Section -->
-            <section class="case-section">
-                <h2>Solution</h2>
-                <p>StudentSwap addresses this by offering an exclusive marketplace for
-buying, renting, and selling other items to verified students. Our core functionalities include
-categorised listings, real-time notifications, and a unique request feature that allows students to
-post items or need requests, especially when urgent.</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">💲</div>
-                        <div class="feature-title">Buy, Rent & Sell</div>
-                        <div class="feature-desc">Exclusive marketplace for buying, renting, and selling items to verified students</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🤝</div>
-                        <div class="feature-title">Verified Community</div>
-                        <div class="feature-desc">Trust system with student verification for secure peer-to-peer transactions</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔔</div>
-                        <div class="feature-title">Real-time Notifications</div>
-                        <div class="feature-desc">Instant alerts for new listings, requests, and transaction updates</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📋</div>
-                        <div class="feature-title">Request Feature</div>
-                        <div class="feature-desc">Post item needs or availability requests when urgent or specific items needed</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Mindmap Section -->
-            <section class="case-section">
-                <h2>Mindmap</h2>
-                <p>We used a mind map to quickly ideate and explore the app's potential features, participants, challenges, and objectives without delving into technical details.</p>
-                <div class="prototype-container">
-                    <img src="../images/studentswap/Mind Map.jpg" alt="Mindmap" style="width: 100%; border-radius: var(--radius-lg);">
-                </div>
-            </section>
-
-            <!-- Sketches Section -->
-            <section class="case-section">
-                <h2>Sketches</h2>
-                <p>Hand-drawn sketches were created independently by team members to visualize core features and user flows, followed by collaborative discussions to align our vision and establish a foundation for wireframing.</p>
-                <div class="prototype-container">
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper">
-                            <div class="carousel-inner">
-                                <div class="carousel-slide active">
-                                    <img src="../images/studentswap/sketches/sk01.png" alt="Sketch 1">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/sketches/sk02.png" alt="Sketch 2">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/sketches/sk03.png" alt="Sketch 3">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/sketches/sk04.png" alt="Sketch 4">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/sketches/sk05.png" alt="Sketch 5">
-                                </div>
-                            </div>
-                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
-                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
-                            <div class="carousel-controls">
-                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
-                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
-                            </div>
+                        </div>
+                        <div class="cs-outcome">
+                            <h3>Limitations</h3>
+                            <ul>
+                                <li><strong>Learning Curve:</strong> Incorporate an onboarding process with tutorials to guide users through creating listings, viewing requests, and messaging features.</li>
+                                <li><strong>Limited Form Information:</strong> Expand the listing form to include item condition, brand, and preferred payment methods (cash, bank transfer).</li>
+                                <li><strong>Demand Validation:</strong> Further testing needed to validate demand and assess whether users prefer using this app over alternative solutions.</li>
+                            </ul>
+                        </div>
+                        <div class="cs-outcome">
+                            <h3>Future Improvements</h3>
+                            <ul>
+                                <li>Integrate social features like follower systems and community groups</li>
+                                <li>Add real-time notifications for listings matching user interests</li>
+                                <li>Enable community-based groups tied to student accommodations</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Wireframes Section -->
-            <section class="case-section">
-                <h2>Wireframes with Information Architecture</h2>
-                <p>We developed mid-fidelity wireframes in Figma based on our sketches, focusing on central features while establishing a foundation for high-fidelity prototyping and design consistency across screens. Also with information architecture to ensure a logical and user-friendly navigation structure.</p>
-                <div class="prototype-container">
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper">
-                            <div class="carousel-inner">
-                                <div class="carousel-slide active">
-                                    <img src="../images/studentswap/wireframes/wf01.png" alt="Wireframe 1">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/wireframes/wf02.png" alt="Wireframe 2">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/wireframes/wf03.png" alt="Wireframe 3">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/wireframes/wf04.png" alt="Wireframe 4">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/wireframes/wf05.png" alt="Wireframe 5">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/wireframes/wf06.png" alt="Wireframe 6">
-                                </div>
-                            </div>
-                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
-                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
-                            <div class="carousel-controls">
-                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
-                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
-                                <button class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Screenshot Section -->
-            <section class="case-section">
-                <h2>Screenshots</h2>
-                <div class="prototype-container">
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper">
-                            <div class="carousel-inner">
-                                <div class="carousel-slide active">
-                                    <img src="../images/studentswap/prototypes/1_Onboarding.png" alt="Prototype 1 - Onboarding">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/prototypes/2_Verification.png" alt="Prototype 2 - Verification">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/prototypes/3_Home.png" alt="Prototype 3 - Home">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/prototypes/4_Request page.png" alt="Prototype 4 - Request Page">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/prototypes/5_Request form.png" alt="Prototype 5 - Request Form">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/prototypes/6_chat.png" alt="Prototype 6 - Chat">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/studentswap/prototypes/7_profile.png" alt="Prototype 7 - Profile">
-                                </div>
-                            </div>
-                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
-                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
-                            <div class="carousel-controls">
-                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
-                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
-                                <button class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
-                                <button class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="https://www.figma.com/proto/Rlnpz060BZyXsmag760gGL/INFO90007---Social-Computing-A3?node-id=1583-5433&p=f&t=9g1HlNO28322XE1i-0&scaling=min-zoom&content-scaling=fixed&page-id=1583%3A3015&starting-point-node-id=1583%3A5433" target="_blank" rel="noopener noreferrer" class="external-link">
-                        View Prototype on Figma →
-                    </a>
-                </div>
-            </section>
-
-            <!-- Observational Techniques Section -->
-            <section class="case-section">
-                <h2>Observational Techniques</h2>
-                <p>We evaluated the system using Think Aloud and Post-Task Walkthrough methods to capture real-time user insights and understand design challenges:</p>
-                <ul class="insights-list">
-                    <li><strong>Think Aloud:</strong> Participants verbalised their thoughts and decision-making processes while interacting with the system, allowing us to capture real-time insights into user navigation and confusion points.</li>
-                    <li><strong>Post-Task Walkthrough:</strong> After completing tasks, participants discussed their recent actions to articulate their reasoning and help us understand why certain design elements were challenging.</li>
-                </ul>
-            </section>
-
-            <!-- Results Section -->
-            <section class="case-section">
-                <h2>Results</h2>
-                <div class="results-grid">
-                    <div class="result-box">
-                        <h3>What Worked</h3>
-                        <ul>
-                            <li>Pretty intuitive interface</li>
-                            <li>Easy to make a request to other students</li>
-                            <li>Addresses the need for a safe and trustworthy marketplace</li>
-                            <li>Create a more efficient and responsive student marketplace</li>
-                        </ul>
-                    </div>
-                    <div class="result-box">
-                        <h3>Limitations</h3>
-                        <ul>
-                            <li><strong>Learning Curve:</strong> Incorporate an onboarding process with tutorials to guide users through creating listings, viewing requests, and messaging features.</li>
-                            <li><strong>Limited Form Information:</strong> Expand the listing form to include item condition, brand, and preferred payment methods (cash, bank transfer).</li>
-                            <li><strong>Demand Validation:</strong> Further testing needed to validate demand and assess whether users prefer using this app over alternative solutions.</li>
-                        </ul>
-                    </div>
-                    <div class="result-box">
-                        <h3>Future Improvements</h3>
-                        <ul>
-                            <li>Integrate social features like follower systems and community groups</li>
-                            <li>Add real-time notifications for listings matching user interests</li>
-                            <li>Enable community-based groups tied to student accommodations</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                <a href="lightsout.html" class="next-project">
+                    <span>
+                        <span class="next-project__label">Next project</span>
+                        <span class="next-project__title">Lights Out</span>
+                    </span>
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
 
@@ -345,93 +309,12 @@ post items or need requests, especially when urgent.</p>
     <footer class="footer">
         <div class="container">
             <p>&copy; <span id="year"></span> Sakdiphat Tanphiphatari. All rights reserved.</p>
-            <p class="footer-credit">Designed & Built by Tan</p>
+            <p class="footer-credit">Designed &amp; Built by Tan</p>
         </div>
     </footer>
 
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-        // Carousel functionality
-        class Carousel {
-            constructor(container) {
-                this.container = container;
-                this.slides = container.querySelectorAll('.carousel-slide');
-                this.dots = container.querySelectorAll('.carousel-dot');
-                this.prevBtn = container.querySelector('.carousel-prev');
-                this.nextBtn = container.querySelector('.carousel-next');
-                this.currentSlide = 0;
-                this.autoChangeInterval = 10000; // 10 seconds
-                this.autoChangeTimer = null;
-                
-                this.init();
-            }
-            
-            init() {
-                this.prevBtn.addEventListener('click', () => this.prevSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-                this.dots.forEach(dot => {
-                    dot.addEventListener('click', (e) => {
-                        this.goToSlide(parseInt(e.target.dataset.slide));
-                    });
-                });
-                
-                this.startAutoChange();
-                this.container.addEventListener('mouseenter', () => this.stopAutoChange());
-                this.container.addEventListener('mouseleave', () => this.startAutoChange());
-            }
-            
-            showSlide(n) {
-                this.slides.forEach(slide => slide.classList.remove('active'));
-                this.dots.forEach(dot => dot.classList.remove('active'));
-                
-                this.slides[n].classList.add('active');
-                this.dots[n].classList.add('active');
-            }
-            
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-                this.showSlide(this.currentSlide);
-                this.resetAutoChange();
-            }
-            
-            prevSlide() {
-                this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-                this.showSlide(this.currentSlide);
-                this.resetAutoChange();
-            }
-            
-            goToSlide(n) {
-                this.currentSlide = n;
-                this.showSlide(this.currentSlide);
-                this.resetAutoChange();
-            }
-            
-            startAutoChange() {
-                if (this.autoChangeTimer) return;
-                this.autoChangeTimer = setInterval(() => this.nextSlide(), this.autoChangeInterval);
-            }
-            
-            stopAutoChange() {
-                if (this.autoChangeTimer) {
-                    clearInterval(this.autoChangeTimer);
-                    this.autoChangeTimer = null;
-                }
-            }
-            
-            resetAutoChange() {
-                this.stopAutoChange();
-                this.startAutoChange();
-            }
-        }
-        
-        // Initialize carousel when DOM is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            const carouselContainers = document.querySelectorAll('.carousel-container');
-            carouselContainers.forEach(container => {
-                new Carousel(container);
-            });
-        });
-    </script>
+    <script src="../js/project.js"></script>
 </body>
 </html>

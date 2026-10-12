@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lights Out - Game design document for a survival-crafting game by Sakdiphat Tanphiphatari">
     <title>Lights Out - Game Dev Project</title>
     <script>
         (function () {
@@ -12,18 +13,19 @@
         })();
     </script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/lightsout.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/gdd.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
-<body class="lightsout-page">
+<body class="project-page gdd-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="logo">Tan</a>
             <div class="nav-end">
                 <ul class="nav-menu">
+                    <li><a href="../index.html#projects" class="nav-link">Work</a></li>
                     <li><a href="../index.html#about" class="nav-link">About</a></li>
-                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
                     <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
                     <li><a href="../docs/Sakdiphat_Resume_UX.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </ul>
@@ -52,119 +54,228 @@
         </div>
     </nav>
 
-    <!-- Project Header -->
-    <div class="project-header">
-        <h1>💡 Lights Out</h1>
-        <p>A Survival-Crafting Game in the Eternal Darkness</p>
-    </div>
+    <main>
+        <!-- Cover -->
+        <header class="gdd-cover">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    All work
+                </a>
+                <div class="gdd-cover__grid">
+                    <div>
+                        <p class="gdd-doc-label">Game design document</p>
+                        <h1 class="gdd-title">Lights Out</h1>
+                        <p class="gdd-tagline">A Survival-Crafting Game in the Eternal Darkness</p>
+                    </div>
 
-    <!-- Game Embed -->
-    <div class="game-embed">
-        <iframe frameborder="0" src="https://itch.io/embed-upload/11935714?color=333333" allowfullscreen="" width="1280" height="740">
-            <a href="https://screentime0.itch.io/lightsout">Play Lights Out on itch.io</a>
-        </iframe>
-    </div>
+                    <!-- Overview -->
+                    <section class="gdd-spec" aria-labelledby="overview-title">
+                        <h2 id="overview-title" class="gdd-spec__title">Overview</h2>
+                        <dl>
+                            <div>
+                                <dt>Role</dt>
+                                <dd>Game Developer</dd>
+                            </div>
+                            <div>
+                                <dt>Duration</dt>
+                                <dd>Semester 2, 2024</dd>
+                            </div>
+                            <div>
+                                <dt>Institution</dt>
+                                <dd>University of Melbourne</dd>
+                            </div>
+                            <div>
+                                <dt>Course</dt>
+                                <dd>COMP30019 – Graphics and Interaction</dd>
+                            </div>
+                            <div>
+                                <dt>Engine</dt>
+                                <dd>Unity with WebGL</dd>
+                            </div>
+                            <div>
+                                <dt>Tools</dt>
+                                <dd>Unity, C#, Git, Jira, Confluence, Discord</dd>
+                            </div>
+                            <div>
+                                <dt>Team</dt>
+                                <dd>
+                                    <ul>
+                                        <li>Sakdiphat Tanphiphatari</li>
+                                        <li>Acalapati Priyatama</li>
+                                        <li>Don Lam Nguyen</li>
+                                        <li>Duc Hang Giang Vu</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </section>
+                </div>
 
-    <!-- Overview Section -->
-    <div class="section">
-        <h2>📋 Overview</h2>
-        <div class="snapshot snapshot--overview">
-            <div class="overview-row">
-                <strong>Role:</strong> Game Developer
+                <!-- Game Embed -->
+                <div class="gdd-build">
+                    <div class="gdd-build__bar">
+                        <span class="gdd-build__status">Playable build · WebGL</span>
+                        <a href="https://screentime0.itch.io/lightsout" target="_blank" rel="noopener noreferrer">
+                            Open on itch.io
+                            <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                        </a>
+                    </div>
+                    <iframe src="https://itch.io/embed-upload/11935714?color=333333" allowfullscreen title="Play Lights Out" loading="lazy">
+                        <a href="https://screentime0.itch.io/lightsout">Play Lights Out on itch.io</a>
+                    </iframe>
+                </div>
             </div>
-            <div class="overview-row">
-                <strong>Duration:</strong> Semester 2, 2024
-            </div>
-            <div class="overview-row">
-                <strong>Institution:</strong> University of Melbourne
-            </div>
-            <div class="overview-row">
-                <strong>Course:</strong> COMP30019 – Graphics and Interaction
-            </div>
-            <div class="overview-row">
-                <strong>Engine:</strong> Unity with WebGL
-            </div>
-            <div class="overview-row">
-                <strong>Tools:</strong> Unity, C#, Git, Jira, Confluence, Discord
-            </div>
-            <div class="overview-row">
-                <strong>Team Members:</strong>
-                <ul class="overview-team-list">
-                    <li>• Sakdiphat Tanphiphatari</li>
-                    <li>• Acalapati Priyatama</li>
-                    <li>• Don Lam Nguyen</li>
-                    <li>• Duc Hang Giang Vu</li>
-                </ul>
+        </header>
+
+        <div class="container project-layout">
+            <aside class="toc" aria-label="Contents">
+                <p class="toc__title">Contents</p>
+                <ol>
+                    <li><a href="#about-game">1.0 About this game</a></li>
+                    <li><a href="#gameplay">2.0 Core gameplay</a></li>
+                    <li><a href="#contribution">3.0 My contribution</a></li>
+                    <li><a href="#gallery">4.0 Screenshot gallery</a></li>
+                </ol>
+            </aside>
+
+            <div class="project-body">
+                <!-- About this game -->
+                <section id="about-game" class="gdd-section">
+                    <div class="gdd-section__head">
+                        <span class="gdd-section__num">1.0</span>
+                        <h2>About this game</h2>
+                    </div>
+                    <dl class="gdd-table">
+                        <div>
+                            <dt>Genre</dt>
+                            <dd>Survival-Crafting with Eerie Atmosphere</dd>
+                        </div>
+                        <div>
+                            <dt>Setting</dt>
+                            <dd>A perpetual nighttime forest where darkness drains your sanity</dd>
+                        </div>
+                        <div>
+                            <dt>Main Goal</dt>
+                            <dd>Light up the entire map to escape the darkness</dd>
+                        </div>
+                        <div>
+                            <dt>Core Loop</dt>
+                            <dd>
+                                <ol class="gdd-loop">
+                                    <li><span class="gdd-loop__step">Gather resources</span></li>
+                                    <li><span class="gdd-loop__step">Craft light sources</span></li>
+                                    <li><span class="gdd-loop__step">Expand your safe zone</span></li>
+                                    <li><span class="gdd-loop__step">Maintain sanity</span></li>
+                                    <li><span class="gdd-loop__repeat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Repeat</span></li>
+                                </ol>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Key Mechanic</dt>
+                            <dd>Darkness drains sanity but light prevents it. Players must balance exploration and crafting to survive.</dd>
+                        </div>
+                        <div>
+                            <dt>Art Style</dt>
+                            <dd>Low-poly 3D with a dark, haunting aesthetic inspired by Don't Starve and Darkwood</dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <!-- Core Gameplay -->
+                <section id="gameplay" class="gdd-section">
+                    <div class="gdd-section__head">
+                        <span class="gdd-section__num">2.0</span>
+                        <h2>Core gameplay</h2>
+                    </div>
+                    <h3 class="gdd-subhead gdd-subhead--flush">What the player does</h3>
+                    <p>In Lights Out, you play as Adam, a stressed office worker who wakes up to find his camping trip has become a nightmare, the world is locked in eternal darkness. Your only tool for survival is your campfire and your wits. Explore the darkness, gather resources, and craft increasingly powerful light sources to push back the shadows. Manage your sanity meter carefully; spend too long in the dark and you'll lose your mind. Build structures for comfort and safety, expand your illuminated territory, and uncover what's really happening in this cursed place.</p>
+                    <ol class="gdd-mechanics">
+                        <li><strong>Exploration &amp; Resource Gathering</strong>Venture into the darkness to collect wood, stone, coal, fiber, and metal from trees, rocks, and ore deposits</li>
+                        <li><strong>Sanity Management</strong>Stay near light sources and buildings to maintain sanity; darkness drains it rapidly</li>
+                        <li><strong>Crafting System</strong>Combine resources to create torches, campfires, electric lights, and buildings with unique properties</li>
+                        <li><strong>Strategic Light Placement</strong>Position light sources to maximize coverage and create safe zones while lighting up new areas</li>
+                        <li><strong>Base Building</strong>Construct buildings that recover sanity and serve as safe havens from the darkness</li>
+                        <li><strong>Stamina System</strong>Sprint across the map to reach distant resources, but manage your stamina carefully</li>
+                        <li><strong>Environmental Obstacles</strong>Navigate through hazards like thorny plants that transform and disappear as light touches them</li>
+                        <li><strong>Progress Tracking</strong>Watch the progress bar fill as you illuminate more of the map, driving toward victory</li>
+                    </ol>
+                </section>
+
+                <!-- My Contribution -->
+                <section id="contribution" class="gdd-section">
+                    <div class="gdd-section__head">
+                        <span class="gdd-section__num">3.0</span>
+                        <h2>My contribution</h2>
+                    </div>
+                    <ul class="gdd-log">
+                        <li><strong>Created Auto Spawn Resources Script</strong>Implemented procedural resource spawning system to ensure trees, stones, and ore respawn dynamically across the map</li>
+                        <li><strong>Designed the World Terrain</strong>Built and optimized the forest environment layout with natural obstacles and resource distribution</li>
+                        <li><strong>Created an Electric Light Source</strong>Developed the street lamp and traffic light systems powered by generators, complete with visual effects and functionality</li>
+                        <li><strong>Fixed Minor Bugs</strong>Debugged and resolved various gameplay and UI issues to improve overall stability and player experience</li>
+                        <li><strong>Evaluation Report Summary</strong>Documented project performance, challenges faced, and lessons learned throughout development</li>
+                    </ul>
+                </section>
+
+                <!-- Screenshot Gallery -->
+                <section id="gallery" class="gdd-section">
+                    <div class="gdd-section__head">
+                        <span class="gdd-section__num">4.0</span>
+                        <h2>Screenshot gallery</h2>
+                    </div>
+                    <div class="gdd-figures">
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc01.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc01.png" alt="Lights Out - Screenshot 1" loading="lazy"></a>
+                            <figcaption><span>FIG 01</span>Lights Out screenshot</figcaption>
+                        </figure>
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc02.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc02.png" alt="Lights Out - Screenshot 2" loading="lazy"></a>
+                            <figcaption><span>FIG 02</span>Lights Out screenshot</figcaption>
+                        </figure>
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc03.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc03.png" alt="Lights Out - Screenshot 3" loading="lazy"></a>
+                            <figcaption><span>FIG 03</span>Lights Out screenshot</figcaption>
+                        </figure>
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc04.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc04.png" alt="Lights Out - Screenshot 4" loading="lazy"></a>
+                            <figcaption><span>FIG 04</span>Lights Out screenshot</figcaption>
+                        </figure>
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc05.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc05.png" alt="Lights Out - Screenshot 5" loading="lazy"></a>
+                            <figcaption><span>FIG 05</span>Lights Out screenshot</figcaption>
+                        </figure>
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc06.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc06.png" alt="Lights Out - Screenshot 6" loading="lazy"></a>
+                            <figcaption><span>FIG 06</span>Lights Out screenshot</figcaption>
+                        </figure>
+                        <figure class="gdd-figure">
+                            <a href="../images/lightsout/sc07.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc07.png" alt="Lights Out - Screenshot 7" loading="lazy"></a>
+                            <figcaption><span>FIG 07</span>Lights Out screenshot</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <a href="chromatic-wizard.html" class="next-project">
+                    <span>
+                        <span class="next-project__label">Next project</span>
+                        <span class="next-project__title">Chromatic Wizard</span>
+                    </span>
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
             </div>
         </div>
-    </div>
-
-    <!-- Snapshot Section -->
-    <div class="snapshot">
-        <h2>📸 About this game</h2>
-        <ul>
-            <li><strong>Genre:</strong> Survival-Crafting with Eerie Atmosphere</li>
-            <li><strong>Setting:</strong> A perpetual nighttime forest where darkness drains your sanity</li>
-            <li><strong>Main Goal:</strong> Light up the entire map to escape the darkness</li>
-            <li><strong>Core Loop:</strong> Gather resources → Craft light sources → Expand your safe zone → Maintain sanity</li>
-            <li><strong>Key Mechanic:</strong> Darkness drains sanity but light prevents it. Players must balance exploration and crafting to survive.</li>
-            <li><strong>Art Style:</strong> Low-poly 3D with a dark, haunting aesthetic inspired by Don't Starve and Darkwood</li>
-        </ul>
-    </div>
-
-    <!-- Core Gameplay Section -->
-    <div class="section">
-        <h2>🎮 Core Gameplay (What the Player Does)</h2>
-        <p>
-            In Lights Out, you play as Adam, a stressed office worker who wakes up to find his camping trip has become a nightmare—the world is locked in eternal darkness. Your only tool for survival is your campfire and your wits. Explore the darkness, gather resources, and craft increasingly powerful light sources to push back the shadows. Manage your sanity meter carefully; spend too long in the dark and you'll lose your mind. Build structures for comfort and safety, expand your illuminated territory, and uncover what's really happening in this cursed place.
-        </p>
-        <ul>
-            <li><strong>Exploration & Resource Gathering:</strong> Venture into the darkness to collect wood, stone, coal, fiber, and metal from trees, rocks, and ore deposits</li>
-            <li><strong>Sanity Management:</strong> Stay near light sources and buildings to maintain sanity; darkness drains it rapidly</li>
-            <li><strong>Crafting System:</strong> Combine resources to create torches, campfires, electric lights, and buildings with unique properties</li>
-            <li><strong>Strategic Light Placement:</strong> Position light sources to maximize coverage and create safe zones while lighting up new areas</li>
-            <li><strong>Base Building:</strong> Construct buildings that recover sanity and serve as safe havens from the darkness</li>
-            <li><strong>Stamina System:</strong> Sprint across the map to reach distant resources, but manage your stamina carefully</li>
-            <li><strong>Environmental Obstacles:</strong> Navigate through hazards like thorny plants that transform and disappear as light touches them</li>
-            <li><strong>Progress Tracking:</strong> Watch the progress bar fill as you illuminate more of the map, driving toward victory</li>
-        </ul>
-    </div>
-
-    <!-- My Contribution Section -->
-    <div class="section contribution-box">
-        <h2>✍️ My Contribution</h2>
-        <ul>
-            <li><strong>Created Auto Spawn Resources Script:</strong> Implemented procedural resource spawning system to ensure trees, stones, and ore respawn dynamically across the map</li>
-            <li><strong>Designed the World Terrain:</strong> Built and optimized the forest environment layout with natural obstacles and resource distribution</li>
-            <li><strong>Created an Electric Light Source:</strong> Developed the street lamp and traffic light systems powered by generators, complete with visual effects and functionality</li>
-            <li><strong>Fixed Minor Bugs:</strong> Debugged and resolved various gameplay and UI issues to improve overall stability and player experience</li>
-            <li><strong>Evaluation Report Summary:</strong> Documented project performance, challenges faced, and lessons learned throughout development</li>
-        </ul>
-    </div>
-
-    <!-- Screenshot Gallery Section -->
-    <div class="section">
-        <h2>📷 Screenshot Gallery</h2>
-        <div class="screenshot-gallery">
-            <img src="../images/lightsout/sc01.png" alt="Lights Out - Screenshot 1">
-            <img src="../images/lightsout/sc02.png" alt="Lights Out - Screenshot 2">
-            <img src="../images/lightsout/sc03.png" alt="Lights Out - Screenshot 3">
-            <img src="../images/lightsout/sc04.png" alt="Lights Out - Screenshot 4">
-            <img src="../images/lightsout/sc05.png" alt="Lights Out - Screenshot 5">
-            <img src="../images/lightsout/sc06.png" alt="Lights Out - Screenshot 6">
-            <img src="../images/lightsout/sc07.png" alt="Lights Out - Screenshot 7">
-        </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-<footer class="footer">
+    <footer class="footer">
         <div class="container">
             <p>&copy; <span id="year"></span> Sakdiphat Tanphiphatari. All rights reserved.</p>
-            <p class="footer-credit">Designed & Built by Tan</p>
+            <p class="footer-credit">Designed &amp; Built by Tan</p>
         </div>
     </footer>
 
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/project.js"></script>
 </body>
 </html>

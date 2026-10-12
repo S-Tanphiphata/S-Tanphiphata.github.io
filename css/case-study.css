@@ -1,0 +1,437 @@
+/* ============================================
+   UX case study pages (XRTV, StudentSwap)
+   Clean product-design case study layout
+   ============================================ */
+
+/* Hero */
+.cs-hero {
+    padding: calc(var(--nav-h) + 3rem) 0 var(--spacing-lg);
+}
+
+.cs-kicker {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.cs-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    max-width: 18ch;
+    margin-bottom: 1.25rem;
+}
+
+.cs-lede {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    max-width: 44ch;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Project metadata strip */
+.cs-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: 1.5rem var(--spacing-md);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.cs-meta dt {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.375rem;
+}
+
+.cs-meta dd {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text-primary);
+}
+
+.cs-meta ul li + li {
+    margin-top: 0.125rem;
+}
+
+/* Cover media (first gallery / embed) */
+.cs-cover {
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+}
+
+.cs-cover .gallery {
+    margin-top: 0;
+}
+
+.cs-cover__actions {
+    margin-top: 1.25rem;
+}
+
+.cs-embed {
+    background-color: var(--color-media-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.cs-embed iframe {
+    display: block;
+    width: 100%;
+    height: min(92vh, 900px);
+    min-height: 640px;
+    border: 0;
+    border-radius: var(--radius-md);
+}
+
+/* Sections */
+.cs-section {
+    padding: 3.5rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.cs-section:first-child {
+    border-top: 0;
+}
+
+.cs-section__head {
+    margin-bottom: 1.5rem;
+}
+
+.cs-section__num {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.cs-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.2vw, 2.375rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+}
+
+.cs-subhead {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin: 2.5rem 0 0.5rem;
+}
+
+/* Problem statement */
+.cs-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.6vw, 1.875rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--color-primary);
+    margin: 0 0 1.75rem;
+    max-width: 40ch;
+}
+
+/* Research stats */
+.cs-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md) var(--spacing-lg);
+    margin: 2rem 0 0.5rem;
+}
+
+.cs-stat__value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--color-primary);
+}
+
+.cs-stat__label {
+    display: block;
+    margin-top: 0.375rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+}
+
+/* Numbered rows (insights, methods) */
+.cs-rows {
+    list-style: none;
+    counter-reset: cs-row;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cs-rows li {
+    counter-increment: cs-row;
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.125rem 0;
+    border-top: 1px solid var(--color-border);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.cs-rows li::before {
+    content: counter(cs-row, decimal-leading-zero);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding-top: 0.15rem;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Feature list (two columns of text, no cards) */
+.cs-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--spacing-md);
+    margin-top: 2rem;
+}
+
+.cs-feature {
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.cs-feature h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.375rem;
+}
+
+.cs-feature p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+/* Architecture flow diagram */
+.cs-flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 3rem minmax(0, 1fr) 3rem minmax(0, 1fr);
+    align-items: stretch;
+    margin: 0.5rem 0 1.75rem;
+    padding: 1.5rem;
+    background-color: var(--color-media-bg);
+    border-radius: var(--radius-lg);
+}
+
+.cs-flow__node {
+    padding: 1.25rem;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.cs-flow__node--core {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-soft);
+}
+
+.cs-flow__role {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cs-flow__node h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.cs-flow__node p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-top: 0.25rem;
+}
+
+.cs-flow__node .cs-flow__detail {
+    font-size: 0.8125rem;
+    color: var(--color-accent);
+}
+
+.cs-flow__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.cs-flow__link .arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Outcomes: label column + list */
+.cs-outcomes {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cs-outcome {
+    display: grid;
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: var(--spacing-md);
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.cs-outcome h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.cs-outcome ul li {
+    position: relative;
+    padding: 0.3rem 0 0.3rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+.cs-outcome ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.95em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+/* Links / actions */
+.cs-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.cs-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.cs-button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-soft);
+}
+
+.cs-button--primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-on-primary);
+}
+
+.cs-button--primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    color: var(--color-on-primary);
+}
+
+.cs-button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.cs-button .icon,
+.cs-button .arrow {
+    width: 1.05rem;
+    height: 1.05rem;
+}
+
+p + .cs-rows,
+.gallery + .cs-actions {
+    margin-top: 1.5rem;
+}
+
+/* Static figure (e.g. mind map) */
+.cs-figure {
+    margin-top: var(--spacing-md);
+    background-color: var(--color-media-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.cs-figure img {
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+    .cs-hero {
+        padding-top: calc(var(--nav-h) + 2rem);
+    }
+
+    .cs-embed {
+        padding: 0.5rem;
+    }
+
+    .cs-embed iframe {
+        min-height: 560px;
+    }
+
+    .cs-features {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cs-flow {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1rem;
+    }
+
+    .cs-flow__link {
+        height: 2.25rem;
+    }
+
+    .cs-flow__link .arrow {
+        transform: rotate(90deg);
+    }
+
+    .cs-outcome {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+}

@@ -13,18 +13,19 @@
         })();
     </script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/xrtv.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/case-study.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
-<body>
+<body class="project-page">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="logo">Tan</a>
             <div class="nav-end">
                 <ul class="nav-menu">
+                    <li><a href="../index.html#projects" class="nav-link">Work</a></li>
                     <li><a href="../index.html#about" class="nav-link">About</a></li>
-                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
                     <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
                     <li><a href="../docs/Sakdiphat_Resume_UX.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </ul>
@@ -53,266 +54,265 @@
         </div>
     </nav>
 
-    <!-- Case Study Content -->
-    <main class="case-study">
-        <div class="container">
-            <!-- Back Link -->
-            <a href="../index.html#projects" class="back-link">← Back to Portfolio</a>
-            
-            <!-- Header -->
-            <header class="case-header">
-                <h1 class="case-title">XRTV – Extended Reality Television</h1>
-                <p class="case-subtitle">Reimagining television history through Mixed Reality</p>
-            </header>
+    <main>
+        <!-- Header -->
+        <header class="cs-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                    All work
+                </a>
+                <p class="cs-kicker">Case study · HCI &amp; UX</p>
+                <h1 class="cs-title">XRTV – Extended Reality Television</h1>
+                <p class="cs-lede">Reimagining television history through Mixed Reality</p>
 
-            <!-- Prototype Section -->
-            <section class="case-section">
-                <h2>Prototype</h2>
-                <div class="prototype-container">
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper">
-                            <div class="carousel-inner">
-                                <div class="carousel-slide active">
-                                    <img src="../images/xrtv/screenshots/sc1.png" alt="Screenshot 1">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/screenshots/sc2.png" alt="Screenshot 2">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/screenshots/sc3.png" alt="Screenshot 3">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/screenshots/sc4.png" alt="Screenshot 4">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/screenshots/sc5.png" alt="Screenshot 5">
-                                </div>
-                            </div>
-                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
-                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
-                            <div class="carousel-controls">
-                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
-                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
-                            </div>
-                        </div>
+                <!-- Overview -->
+                <dl class="cs-meta">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>UX Researcher &amp; XR Developer</dd>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=pf3NBIZumzY" target="_blank" rel="noopener noreferrer" class="external-link">
-                        View Unity Prototype →
+                    <div>
+                        <dt>Duration</dt>
+                        <dd>Semester 1, 2025</dd>
+                    </div>
+                    <div>
+                        <dt>Institution</dt>
+                        <dd>University of Melbourne</dd>
+                    </div>
+                    <div>
+                        <dt>Course</dt>
+                        <dd>INFO90009 – User Experience Design</dd>
+                    </div>
+                    <div>
+                        <dt>Tools</dt>
+                        <dd>Unity, Meta XR SDK, Figma, ESP32, Arduino</dd>
+                    </div>
+                    <div>
+                        <dt>Team Members</dt>
+                        <dd>
+                            <ul>
+                                <li>Sakdiphat Tanphiphatari</li>
+                                <li>Thanh Hoang Nguyen</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </header>
+
+        <!-- Prototype -->
+        <section class="cs-cover" aria-label="Prototype">
+            <div class="container">
+                <figure class="gallery" data-gallery style="--ratio: 16 / 10;">
+                    <div class="gallery__stage">
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc1.png" alt="XRTV prototype screenshot 1"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc2.png" alt="XRTV prototype screenshot 2" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc3.png" alt="XRTV prototype screenshot 3" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc4.png" alt="XRTV prototype screenshot 4" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc5.png" alt="XRTV prototype screenshot 5" loading="lazy"></div>
+                    </div>
+                    <figcaption>Prototype screenshots from the Unity build.</figcaption>
+                </figure>
+                <div class="cs-cover__actions">
+                    <a href="https://www.youtube.com/watch?v=pf3NBIZumzY" target="_blank" rel="noopener noreferrer" class="cs-button cs-button--primary">
+                        View Unity Prototype
+                        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
                     </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Overview Section -->
-            <section class="case-section">
-                <h2>Overview</h2>
-                <div class="info-table">
-                    <div class="info-row">
-                        <span class="info-label">Role:</span>
-                        <span class="info-value">UX Researcher & XR Developer</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Duration:</span>
-                        <span class="info-value">Semester 1, 2025</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Institution:</span>
-                        <span class="info-value">University of Melbourne</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Course:</span>
-                        <span class="info-value">INFO90009 – User Experience Design</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Tools:</span>
-                        <span class="info-value">Unity, Meta XR SDK, Figma, ESP32, Arduino</span>
-                    </div>
-                                        <div class="info-row">
-                        <span class="info-label">Team Members:</span>
-                        <span class="info-value">
-                            <ul style="list-style: none; padding: 0; margin: 0;">
-                                <li>• Sakdiphat Tanphiphatari</li>
-                                <li>• Thanh Hoang Nguyen</li>
-                            </ul>
-                        </span>
-                    </div>
-                </div>
-            </section>
+        <div class="container project-layout">
+            <aside class="toc" aria-label="Contents">
+                <p class="toc__title">Contents</p>
+                <ol>
+                    <li><a href="#problem">Problem Statement</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#sketches">Sketches</a></li>
+                    <li><a href="#architecture">Technical Architecture</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ol>
+            </aside>
 
-            <!-- Problem Statement Section -->
-            <section class="case-section">
-                <h2>Problem Statement</h2>
-                <div class="problem-statement">
-                    "How might we support people in discovering overlooked forms of visual media while making learning about interface evolution accessible—even for XR beginners?"
-                </div>
-                <p>Television has evolved dramatically since the 1950s, from mechanical systems to digital smart TVs. However, most people are unaware of the rich history of TV interfaces and interaction design. This project explores how Mixed Reality can make learning about this evolution more engaging and accessible.</p>
-            </section>
+            <div class="project-body">
+                <!-- Problem Statement -->
+                <section id="problem" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">01</span>
+                        <h2>Problem Statement</h2>
+                    </div>
+                    <blockquote class="cs-quote">"How might we support people in discovering overlooked forms of visual media while making learning about interface evolution accessible, even for XR beginners?"</blockquote>
+                    <p>Television has evolved dramatically since the 1950s, from mechanical systems to digital smart TVs. However, most people are unaware of the rich history of TV interfaces and interaction design. This project explores how Mixed Reality can make learning about this evolution more engaging and accessible.</p>
+                </section>
 
-            <!-- Research Section -->
-            <section class="case-section">
-                <h2>Research</h2>
-                <p>We conducted comprehensive user research to understand how people interact with XR technology and what makes historical learning engaging.</p>
-                <p><span class="stat-highlight">7 Interviews</span> + <span class="stat-highlight">24 Surveys</span></p>
-                
-                <h3>Key Insights</h3>
-                <ul class="insights-list">
-                    <li>Users unfamiliar with XR need clear onboarding and intuitive controls</li>
-                    <li>Physical controls (knobs) create nostalgic connection and enhance engagement</li>
-                    <li>Gesture control was engaging but unreliable due to sensitivity, overlapping gestures, and insufficient feedback or guidance.</li>
-                    <li>Learning through interaction is more effective than static content</li>
-                </ul>
-            </section>
-
-            <!-- Solution Section -->
-            <section class="case-section">
-                <h2>Solution</h2>
-                <p>XRTV is a Mixed Reality application that lets users interact with historical television sets using both physical and gesture controls, creating an immersive learning experience.</p>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🎛️</div>
-                        <div class="feature-title">Knob Controls</div>
-                        <div class="feature-desc">Physical ESP32-powered dials for authentic retro TV interaction</div>
+                <!-- Research -->
+                <section id="research" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">02</span>
+                        <h2>Research</h2>
                     </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🤲</div>
-                        <div class="feature-title">Gesture Control</div>
-                        <div class="feature-desc">Natural hand tracking for intuitive XR interaction</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <div class="feature-title">Learning Mode</div>
-                        <div class="feature-desc">Interactive timeline of TV evolution and interface design</div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🥽</div>
-                        <div class="feature-title">MR Passthrough</div>
-                        <div class="feature-desc">Blend virtual TV with real environment for immersive experience</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Sketches Section -->
-            <section class="case-section">
-                <h2>Sketches</h2>
-                <div class="sketches-container">
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper">
-                            <div class="carousel-inner">
-                                <div class="carousel-slide active">
-                                    <img src="../images/xrtv/sketches/sk1.png" alt="Sketch 1">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk2.png" alt="Sketch 2">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk3.png" alt="Sketch 3">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk4.png" alt="Sketch 4">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk5.png" alt="Sketch 5">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk6.png" alt="Sketch 6">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk7.png" alt="Sketch 7">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk8.png" alt="Sketch 8">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="../images/xrtv/sketches/sk9.png" alt="Sketch 9">
-                                </div>
-                            </div>
-                            <button class="carousel-nav carousel-prev" aria-label="Previous slide">❮</button>
-                            <button class="carousel-nav carousel-next" aria-label="Next slide">❯</button>
-                            <div class="carousel-controls">
-                                <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
-                                <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
-                                <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
-                                <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
-                                <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
-                                <button class="carousel-dot" data-slide="5" aria-label="Slide 6"></button>
-                                <button class="carousel-dot" data-slide="6" aria-label="Slide 7"></button>
-                                <button class="carousel-dot" data-slide="7" aria-label="Slide 8"></button>
-                                <button class="carousel-dot" data-slide="8" aria-label="Slide 9"></button>
-                            </div>
+                    <p>We conducted comprehensive user research to understand how people interact with XR technology and what makes historical learning engaging.</p>
+                    <div class="cs-stats">
+                        <div class="cs-stat">
+                            <span class="cs-stat__value">7</span>
+                            <span class="cs-stat__label">Interviews</span>
                         </div>
+                        <div class="cs-stat">
+                            <span class="cs-stat__value">24</span>
+                            <span class="cs-stat__label">Surveys</span>
+                        </div>
+                    </div>
+
+                    <h3 class="cs-subhead">Key Insights</h3>
+                    <ol class="cs-rows">
+                        <li>Users unfamiliar with XR need clear onboarding and intuitive controls</li>
+                        <li>Physical controls (knobs) create nostalgic connection and enhance engagement</li>
+                        <li>Gesture control was engaging but unreliable due to sensitivity, overlapping gestures, and insufficient feedback or guidance.</li>
+                        <li>Learning through interaction is more effective than static content</li>
+                    </ol>
+                </section>
+
+                <!-- Solution -->
+                <section id="solution" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">03</span>
+                        <h2>Solution</h2>
+                    </div>
+                    <p>XRTV is a Mixed Reality application that lets users interact with historical television sets using both physical and gesture controls, creating an immersive learning experience.</p>
+                    <div class="cs-features">
+                        <div class="cs-feature">
+                            <h3>Knob Controls</h3>
+                            <p>Physical ESP32-powered dials for authentic retro TV interaction</p>
+                        </div>
+                        <div class="cs-feature">
+                            <h3>Gesture Control</h3>
+                            <p>Natural hand tracking for intuitive XR interaction</p>
+                        </div>
+                        <div class="cs-feature">
+                            <h3>Learning Mode</h3>
+                            <p>Interactive timeline of TV evolution and interface design</p>
+                        </div>
+                        <div class="cs-feature">
+                            <h3>MR Passthrough</h3>
+                            <p>Blend virtual TV with real environment for immersive experience</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sketches -->
+                <section id="sketches" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">04</span>
+                        <h2>Sketches</h2>
                     </div>
                     <p>Early design explorations and wireframe sketches showing the iterative design process for the XRTV interface and user interactions.</p>
-                </div>
-            </section>
+                    <figure class="gallery" data-gallery style="--ratio: 4 / 3;">
+                        <div class="gallery__stage">
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk1.png" alt="XRTV sketch 1" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk2.png" alt="XRTV sketch 2" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk3.png" alt="XRTV sketch 3" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk4.png" alt="XRTV sketch 4" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk5.png" alt="XRTV sketch 5" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk6.png" alt="XRTV sketch 6" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk7.png" alt="XRTV sketch 7" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk8.png" alt="XRTV sketch 8" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk9.png" alt="XRTV sketch 9" loading="lazy"></div>
+                        </div>
+                    </figure>
+                </section>
 
-            <!-- Technical Architecture Section -->
-            <section class="case-section">
-                <h2>Technical Architecture</h2>
-                <div class="architecture-grid">
-                    <div class="arch-component arch-input">
-                        <div class="arch-icon">⚙️</div>
-                        <h3>ESP32 Dials</h3>
-                        <p>Physical I/O</p>
-                        <p class="arch-details">Serial communication via USB</p>
+                <!-- Technical Architecture -->
+                <section id="architecture" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">05</span>
+                        <h2>Technical Architecture</h2>
                     </div>
-                    <div class="arch-arrow">→</div>
-                    <div class="arch-component arch-engine">
-                        <div class="arch-icon">⚡</div>
-                        <h3>Unity Engine</h3>
-                        <p>+ Meta XR SDK</p>
-                        <p class="arch-details">Core processing layer</p>
+                    <div class="cs-flow">
+                        <div class="cs-flow__node">
+                            <span class="cs-flow__role">Input</span>
+                            <h3>ESP32 Dials</h3>
+                            <p>Physical I/O</p>
+                            <p class="cs-flow__detail">Serial communication via USB</p>
+                        </div>
+                        <div class="cs-flow__link" aria-hidden="true">
+                            <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                        </div>
+                        <div class="cs-flow__node cs-flow__node--core">
+                            <span class="cs-flow__role">Engine</span>
+                            <h3>Unity Engine</h3>
+                            <p>+ Meta XR SDK</p>
+                            <p class="cs-flow__detail">Core processing layer</p>
+                        </div>
+                        <div class="cs-flow__link" aria-hidden="true">
+                            <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                        </div>
+                        <div class="cs-flow__node">
+                            <span class="cs-flow__role">Output</span>
+                            <h3>Meta Quest</h3>
+                            <p>MR Passthrough</p>
+                            <p class="cs-flow__detail">Display &amp; interaction</p>
+                        </div>
                     </div>
-                    <div class="arch-arrow">→</div>
-                    <div class="arch-component arch-output">
-                        <div class="arch-icon">🥽</div>
-                        <h3>Meta Quest</h3>
-                        <p>MR Passthrough</p>
-                        <p class="arch-details">Display & interaction</p>
-                    </div>
-                </div>
-                <p style="margin-top: var(--spacing-lg);">The system integrates physical ESP32-powered dials that communicate with Unity via serial connection, while Meta XR SDK handles hand tracking and passthrough rendering for an immersive Mixed Reality experience.</p>
-            </section>
+                    <p>The system integrates physical ESP32-powered dials that communicate with Unity via serial connection, while Meta XR SDK handles hand tracking and passthrough rendering for an immersive Mixed Reality experience.</p>
+                </section>
 
-            <!-- Results Section -->
-            <section class="case-section">
-                <h2>Results</h2>
-                <div class="results-grid">
-                    <div class="result-box">
-                        <h3>What Worked</h3>
-                        <ul>
-                            <li>Physical knob controls enhanced user engagement</li>
-                            <li>Passthrough MR created immersive learning environment</li>
-                            <li>Users successfully learned about TV evolution</li>
-                            <li>Intuitive gesture controls lowered barrier to entry</li>
-                        </ul>
+                <!-- Results -->
+                <section id="results" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">06</span>
+                        <h2>Results</h2>
                     </div>
-                    <div class="result-box">
-                        <h3>Future Improvements</h3>
-                        <ul>
-                            <li>Expand TV model library with more historical models</li>
-                            <li>Add audio and visual feedback cues</li>
-                            <li>Create comprehensive onboarding tutorial</li>
-                            <li>Implement multiplayer learning experiences</li>
-                        </ul>
+                    <div class="cs-outcomes">
+                        <div class="cs-outcome">
+                            <h3>What Worked</h3>
+                            <ul>
+                                <li>Physical knob controls enhanced user engagement</li>
+                                <li>Passthrough MR created immersive learning environment</li>
+                                <li>Users successfully learned about TV evolution</li>
+                                <li>Intuitive gesture controls lowered barrier to entry</li>
+                            </ul>
+                        </div>
+                        <div class="cs-outcome">
+                            <h3>Future Improvements</h3>
+                            <ul>
+                                <li>Expand TV model library with more historical models</li>
+                                <li>Add audio and visual feedback cues</li>
+                                <li>Create comprehensive onboarding tutorial</li>
+                                <li>Implement multiplayer learning experiences</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Links Section -->
-            <section class="case-section">
-                <h2>Links</h2>
-                <div class="links-section">
-                    <a href="https://github.com/S-Tanphiphata/INFO90009" target="_blank" rel="noopener noreferrer" class="external-link">
-                        💻 GitHub Repository
-                    </a>
-                    <a href="https://www.figma.com/proto/hra7fA8tehBCS4SazPpiip/Television-MR?node-id=604-248&starting-point-node-id=604%3A248" target="_blank" rel="noopener noreferrer" class="external-link">
-                        📖 Visual Report
-                    </a>
-                </div>
-            </section>
+                <!-- Links -->
+                <section id="links" class="cs-section">
+                    <div class="cs-section__head">
+                        <span class="cs-section__num">07</span>
+                        <h2>Links</h2>
+                    </div>
+                    <div class="cs-actions">
+                        <a href="https://github.com/S-Tanphiphata/INFO90009" target="_blank" rel="noopener noreferrer" class="cs-button">
+                            <svg class="icon" viewBox="84 7399 20 20" aria-hidden="true"><path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399"/></svg>
+                            GitHub Repository
+                        </a>
+                        <a href="https://www.figma.com/proto/hra7fA8tehBCS4SazPpiip/Television-MR?node-id=604-248&amp;starting-point-node-id=604%3A248" target="_blank" rel="noopener noreferrer" class="cs-button">
+                            <svg class="icon icon--stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg>
+                            Visual Report
+                        </a>
+                    </div>
+                </section>
+
+                <a href="studentswap.html" class="next-project">
+                    <span>
+                        <span class="next-project__label">Next case study</span>
+                        <span class="next-project__title">StudentSwap</span>
+                    </span>
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
+            </div>
         </div>
     </main>
 
@@ -320,93 +320,12 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; <span id="year"></span> Sakdiphat Tanphiphatari. All rights reserved.</p>
-            <p class="footer-credit">Designed & Built by Tan</p>
+            <p class="footer-credit">Designed &amp; Built by Tan</p>
         </div>
     </footer>
 
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-        // Carousel functionality
-        class Carousel {
-            constructor(container) {
-                this.container = container;
-                this.slides = container.querySelectorAll('.carousel-slide');
-                this.dots = container.querySelectorAll('.carousel-dot');
-                this.prevBtn = container.querySelector('.carousel-prev');
-                this.nextBtn = container.querySelector('.carousel-next');
-                this.currentSlide = 0;
-                this.autoChangeInterval = 10000; // 10 seconds
-                this.autoChangeTimer = null;
-                
-                this.init();
-            }
-            
-            init() {
-                this.prevBtn.addEventListener('click', () => this.prevSlide());
-                this.nextBtn.addEventListener('click', () => this.nextSlide());
-                this.dots.forEach(dot => {
-                    dot.addEventListener('click', (e) => {
-                        this.goToSlide(parseInt(e.target.dataset.slide));
-                    });
-                });
-                
-                this.startAutoChange();
-                this.container.addEventListener('mouseenter', () => this.stopAutoChange());
-                this.container.addEventListener('mouseleave', () => this.startAutoChange());
-            }
-            
-            showSlide(n) {
-                this.slides.forEach(slide => slide.classList.remove('active'));
-                this.dots.forEach(dot => dot.classList.remove('active'));
-                
-                this.slides[n].classList.add('active');
-                this.dots[n].classList.add('active');
-            }
-            
-            nextSlide() {
-                this.currentSlide = (this.currentSlide + 1) % this.slides.length;
-                this.showSlide(this.currentSlide);
-                this.resetAutoChange();
-            }
-            
-            prevSlide() {
-                this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-                this.showSlide(this.currentSlide);
-                this.resetAutoChange();
-            }
-            
-            goToSlide(n) {
-                this.currentSlide = n;
-                this.showSlide(this.currentSlide);
-                this.resetAutoChange();
-            }
-            
-            startAutoChange() {
-                if (this.autoChangeTimer) return;
-                this.autoChangeTimer = setInterval(() => this.nextSlide(), this.autoChangeInterval);
-            }
-            
-            stopAutoChange() {
-                if (this.autoChangeTimer) {
-                    clearInterval(this.autoChangeTimer);
-                    this.autoChangeTimer = null;
-                }
-            }
-            
-            resetAutoChange() {
-                this.stopAutoChange();
-                this.startAutoChange();
-            }
-        }
-        
-        // Initialize carousel when DOM is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            const carouselContainers = document.querySelectorAll('.carousel-container');
-            carouselContainers.forEach(container => {
-                new Carousel(container);
-            });
-        });
-    </script>
+    <script src="../js/project.js"></script>
 </body>
 </html>
