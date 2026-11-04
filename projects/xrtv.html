@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="XRTV Case Study - Extended Reality Television by Sakdiphat Tanphiphatari">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sakdiphat Tanphiphatari">
+    <meta property="og:title" content="XRTV Case Study - Sakdiphat Tanphiphatari">
+    <meta property="og:description" content="XRTV Case Study - Extended Reality Television by Sakdiphat Tanphiphatari">
+    <meta property="og:url" content="https://s-tanphiphata.github.io/projects/xrtv.html">
+    <meta property="og:image" content="https://s-tanphiphata.github.io/images/og/xrtv.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>XRTV Case Study - Sakdiphat Tanphiphatari</title>
     <script>
         (function () {
-            if (localStorage.getItem('theme') === 'dark') {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&amp;family=Inter:wght@400;500;600&amp;display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/case-study.css">
@@ -45,7 +56,7 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -106,11 +117,11 @@
             <div class="container">
                 <figure class="gallery" data-gallery style="--ratio: 16 / 10;">
                     <div class="gallery__stage">
-                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc1.png" alt="XRTV prototype screenshot 1"></div>
-                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc2.png" alt="XRTV prototype screenshot 2" loading="lazy"></div>
-                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc3.png" alt="XRTV prototype screenshot 3" loading="lazy"></div>
-                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc4.png" alt="XRTV prototype screenshot 4" loading="lazy"></div>
-                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc5.png" alt="XRTV prototype screenshot 5" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc1.webp" data-thumb="../images/xrtv/screenshots/sc1-thumb.webp" alt="XRTV menu (learn, play, exit) beside a virtual flat-screen TV, with a miniature TV on the table"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc2.webp" data-thumb="../images/xrtv/screenshots/sc2-thumb.webp" alt="Samsung Smart TV ES8000 model with tracked hands, an info panel and the prompt to turn the TV on" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc3.webp" data-thumb="../images/xrtv/screenshots/sc3-thumb.webp" alt="Retro TV model in Play mode with an instruction panel" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc4.webp" data-thumb="../images/xrtv/screenshots/sc4-thumb.webp" alt="Retro TV model with Learning mode and Exit options" loading="lazy"></div>
+                        <div class="gallery__slide"><img src="../images/xrtv/screenshots/sc5.webp" data-thumb="../images/xrtv/screenshots/sc5-thumb.webp" alt="Smart Hub interface controlled by hand gestures, with a gesture guide below" loading="lazy"></div>
                     </div>
                     <figcaption>Prototype screenshots from the Unity build.</figcaption>
                 </figure>
@@ -211,15 +222,15 @@
                     <p>Early design explorations and wireframe sketches showing the iterative design process for the XRTV interface and user interactions.</p>
                     <figure class="gallery" data-gallery style="--ratio: 4 / 3;">
                         <div class="gallery__stage">
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk1.png" alt="XRTV sketch 1" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk2.png" alt="XRTV sketch 2" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk3.png" alt="XRTV sketch 3" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk4.png" alt="XRTV sketch 4" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk5.png" alt="XRTV sketch 5" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk6.png" alt="XRTV sketch 6" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk7.png" alt="XRTV sketch 7" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk8.png" alt="XRTV sketch 8" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk9.png" alt="XRTV sketch 9" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk1.webp" data-thumb="../images/xrtv/sketches/sk1-thumb.webp" alt="Sketch: miniature TV models set on a real table" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk2.webp" data-thumb="../images/xrtv/sketches/sk2-thumb.webp" alt="Sketch: the user touches a miniature TV to start" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk3.webp" data-thumb="../images/xrtv/sketches/sk3-thumb.webp" alt="Sketch: a virtual 3D TV pops up above the touched miniature" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk4.webp" data-thumb="../images/xrtv/sketches/sk4-thumb.webp" alt="Sketch: old TV model with Close, Play and Learn options" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk5.webp" data-thumb="../images/xrtv/sketches/sk5-thumb.webp" alt="Sketch: Learn mode with historical facts and step-by-step instructions" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk6.webp" data-thumb="../images/xrtv/sketches/sk6-thumb.webp" alt="Sketch: Well done screen to close, play freely or learn again" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk7.webp" data-thumb="../images/xrtv/sketches/sk7-thumb.webp" alt="Sketch: the user touches another miniature TV" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk8.webp" data-thumb="../images/xrtv/sketches/sk8-thumb.webp" alt="Sketch: a different 3D model pops up" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/xrtv/sketches/sk9.webp" data-thumb="../images/xrtv/sketches/sk9-thumb.webp" alt="Sketch: gesture-controlled TV model with the same Learn and Play options" loading="lazy"></div>
                         </div>
                     </figure>
                 </section>
@@ -272,13 +283,13 @@
                                 <li>Physical knob controls enhanced user engagement</li>
                                 <li>Passthrough MR created immersive learning environment</li>
                                 <li>Users successfully learned about TV evolution</li>
-                                <li>Intuitive gesture controls lowered barrier to entry</li>
                             </ul>
                         </div>
                         <div class="cs-outcome">
                             <h3>Future Improvements</h3>
                             <ul>
                                 <li>Expand TV model library with more historical models</li>
+                                <li>Make gesture control more reliable with clearer guidance</li>
                                 <li>Add audio and visual feedback cues</li>
                                 <li>Create comprehensive onboarding tutorial</li>
                                 <li>Implement multiplayer learning experiences</li>

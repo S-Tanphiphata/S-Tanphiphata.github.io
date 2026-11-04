@@ -177,10 +177,6 @@ function initParticleAnimation() {
 }
 
 // ============================================
-// Update Copyright Year
-// ============================================
-
-// ============================================
 // Smooth Scroll for Anchor Links
 // ============================================
 function initSmoothScroll() {
@@ -261,32 +257,28 @@ function initMobileNav() {
     const navMenu = document.querySelector('.nav-menu');
     
     if (navToggle && navMenu) {
+        const spans = navToggle.querySelectorAll('span');
+
+        // Open/close the menu, animate the hamburger and keep aria-expanded in sync
+        function setMenuOpen(open) {
+            navMenu.classList.toggle('active', open);
+            navToggle.setAttribute('aria-expanded', String(open));
+            spans[0].style.transform = open ? 'rotate(45deg) translateY(10px)' : 'none';
+            spans[1].style.opacity = open ? '0' : '1';
+            spans[2].style.transform = open ? 'rotate(-45deg) translateY(-10px)' : 'none';
+        }
+
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            
-            // Animate hamburger menu
-            const spans = this.querySelectorAll('span');
-            if (navMenu.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translateY(10px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+            setMenuOpen(!navMenu.classList.contains('active'));
         });
-        
-        // Close menu when clicking outside
+
+        // Close menu when a link is chosen or when clicking outside
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.closest('a')) setMenuOpen(false);
+        });
         document.addEventListener('click', function(e) {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('active');
-                
-                // Reset hamburger animation
-                const spans = navToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                setMenuOpen(false);
             }
         });
     }

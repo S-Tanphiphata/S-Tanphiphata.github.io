@@ -2,8 +2,11 @@
 (function () {
     const STORAGE_KEY = 'theme';
 
+    // Saved choice wins; otherwise follow the OS setting
     function getTheme() {
-        return localStorage.getItem(STORAGE_KEY) === 'dark' ? 'dark' : 'light';
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored === 'dark' || stored === 'light') return stored;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
     function updateToggleUI(theme) {
