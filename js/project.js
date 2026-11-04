@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ============================================
 // Gallery Carousel
-// Markup: [data-gallery] > .gallery__stage > .gallery__slide > img
+// Markup: [data-gallery] > .gallery__stage > .gallery__slide > img[data-thumb]
 // Buttons, counter and thumbnails are generated here.
 // ============================================
 function initGallery(gallery) {
@@ -43,7 +43,8 @@ function initGallery(gallery) {
         btn.setAttribute('aria-label', 'Show image ' + (i + 1) + (img && img.alt ? ': ' + img.alt : ''));
         if (img) {
             const thumbImg = document.createElement('img');
-            thumbImg.src = img.getAttribute('src');
+            // Small preview file if provided, so the strip doesn't load every full-size image
+            thumbImg.src = img.dataset.thumb || img.getAttribute('src');
             thumbImg.alt = '';
             thumbImg.loading = 'lazy';
             btn.appendChild(thumbImg);

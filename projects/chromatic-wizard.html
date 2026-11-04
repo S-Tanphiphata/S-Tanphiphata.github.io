@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chromatic Wizard - Game design document for a color-magic wave shooter by Sakdiphat Tanphiphatari">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sakdiphat Tanphiphatari">
+    <meta property="og:title" content="Chromatic Wizard - Game Dev Project">
+    <meta property="og:description" content="Chromatic Wizard - Game design document for a color-magic wave shooter by Sakdiphat Tanphiphatari">
+    <meta property="og:url" content="https://s-tanphiphata.github.io/projects/chromatic-wizard.html">
+    <meta property="og:image" content="https://s-tanphiphata.github.io/images/og/chromatic-wizard.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Chromatic Wizard - Game Dev Project</title>
     <script>
         (function () {
-            if (localStorage.getItem('theme') === 'dark') {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/gdd.css">
@@ -45,7 +56,7 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>

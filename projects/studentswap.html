@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="StudentSwap Case Study - A Platform for Student Items Exchange by Sakdiphat Tanphiphatari">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sakdiphat Tanphiphatari">
+    <meta property="og:title" content="StudentSwap Case Study - Sakdiphat Tanphiphatari">
+    <meta property="og:description" content="StudentSwap Case Study - A Platform for Student Items Exchange by Sakdiphat Tanphiphatari">
+    <meta property="og:url" content="https://s-tanphiphata.github.io/projects/studentswap.html">
+    <meta property="og:image" content="https://s-tanphiphata.github.io/images/og/studentswap.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>StudentSwap Case Study - Sakdiphat Tanphiphatari</title>
     <script>
         (function () {
-            if (localStorage.getItem('theme') === 'dark') {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&amp;family=Inter:wght@400;500;600&amp;display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/case-study.css">
@@ -45,7 +56,7 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -178,8 +189,8 @@
                     </div>
                     <p>We used a mind map to quickly ideate and explore the app's potential features, participants, challenges, and objectives without delving into technical details.</p>
                     <figure class="cs-figure">
-                        <a href="../images/studentswap/Mind Map.jpg" target="_blank" rel="noopener noreferrer">
-                            <img src="../images/studentswap/Mind Map.jpg" alt="StudentSwap mind map of features, participants, challenges and objectives" loading="lazy">
+                        <a href="../images/studentswap/mind-map.webp" target="_blank" rel="noopener noreferrer">
+                            <img src="../images/studentswap/mind-map.webp" alt="StudentSwap mind map of features, participants, challenges and objectives" loading="lazy">
                         </a>
                     </figure>
                 </section>
@@ -193,11 +204,11 @@
                     <p>Hand-drawn sketches were created independently by team members to visualize core features and user flows, followed by collaborative discussions to align our vision and establish a foundation for wireframing.</p>
                     <figure class="gallery" data-gallery style="--ratio: 16 / 10;">
                         <div class="gallery__stage">
-                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk01.png" alt="Sketch 1" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk02.png" alt="Sketch 2" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk03.png" alt="Sketch 3" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk04.png" alt="Sketch 4" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk05.png" alt="Sketch 5" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk01.webp" data-thumb="../images/studentswap/sketches/sk01-thumb.webp" alt="Sketch: product page and contact-seller chat" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk02.webp" data-thumb="../images/studentswap/sketches/sk02-thumb.webp" alt="Sketch: event page for a garage sale with attendees" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk03.webp" data-thumb="../images/studentswap/sketches/sk03-thumb.webp" alt="Sketch: login, sign-up with student card upload, and verification" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk04.webp" data-thumb="../images/studentswap/sketches/sk04-thumb.webp" alt="Sketch: nearby item requests to accept or reject" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/sketches/sk05.webp" data-thumb="../images/studentswap/sketches/sk05-thumb.webp" alt="Sketch: request overview and map of users who accepted" loading="lazy"></div>
                         </div>
                     </figure>
                 </section>
@@ -211,12 +222,12 @@
                     <p>We developed mid-fidelity wireframes in Figma based on our sketches, focusing on central features while establishing a foundation for high-fidelity prototyping and design consistency across screens. Also with information architecture to ensure a logical and user-friendly navigation structure.</p>
                     <figure class="gallery" data-gallery style="--ratio: 16 / 10;">
                         <div class="gallery__stage">
-                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf01.png" alt="Wireframe 1" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf02.png" alt="Wireframe 2" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf03.png" alt="Wireframe 3" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf04.png" alt="Wireframe 4" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf05.png" alt="Wireframe 5" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf06.png" alt="Wireframe 6" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf01.webp" data-thumb="../images/studentswap/wireframes/wf01-thumb.webp" alt="Wireframe: onboarding and verification flow with verification and category screens" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf02.webp" data-thumb="../images/studentswap/wireframes/wf02-thumb.webp" alt="Wireframe: navigation bar and navigation flow" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf03.webp" data-thumb="../images/studentswap/wireframes/wf03-thumb.webp" alt="Wireframe: homepage flow and homepage screen" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf04.webp" data-thumb="../images/studentswap/wireframes/wf04-thumb.webp" alt="Wireframe: post items flow with sell item and renting request screens" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf05.webp" data-thumb="../images/studentswap/wireframes/wf05-thumb.webp" alt="Wireframe: chat flow with chat list and chat screens" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/wireframes/wf06.webp" data-thumb="../images/studentswap/wireframes/wf06-thumb.webp" alt="Wireframe: profile flow and profile screen with badges and listings" loading="lazy"></div>
                         </div>
                     </figure>
                 </section>
@@ -229,13 +240,13 @@
                     </div>
                     <figure class="gallery" data-gallery style="--ratio: 16 / 9;">
                         <div class="gallery__stage">
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/1_Onboarding.png" alt="Prototype 1 - Onboarding" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/2_Verification.png" alt="Prototype 2 - Verification" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/3_Home.png" alt="Prototype 3 - Home" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/4_Request page.png" alt="Prototype 4 - Request Page" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/5_Request form.png" alt="Prototype 5 - Request Form" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/6_chat.png" alt="Prototype 6 - Chat" loading="lazy"></div>
-                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/7_profile.png" alt="Prototype 7 - Profile" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/1-onboarding.webp" data-thumb="../images/studentswap/prototypes/1-onboarding-thumb.webp" alt="Prototype 1 - Onboarding" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/2-verification.webp" data-thumb="../images/studentswap/prototypes/2-verification-thumb.webp" alt="Prototype 2 - Verification" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/3-home.webp" data-thumb="../images/studentswap/prototypes/3-home-thumb.webp" alt="Prototype 3 - Home" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/4-request-page.webp" data-thumb="../images/studentswap/prototypes/4-request-page-thumb.webp" alt="Prototype 4 - Request Page" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/5-request-form.webp" data-thumb="../images/studentswap/prototypes/5-request-form-thumb.webp" alt="Prototype 5 - Request Form" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/6-chat.webp" data-thumb="../images/studentswap/prototypes/6-chat-thumb.webp" alt="Prototype 6 - Chat" loading="lazy"></div>
+                            <div class="gallery__slide"><img src="../images/studentswap/prototypes/7-profile.webp" data-thumb="../images/studentswap/prototypes/7-profile-thumb.webp" alt="Prototype 7 - Profile" loading="lazy"></div>
                         </div>
                     </figure>
                     <div class="cs-actions">
@@ -287,7 +298,7 @@
                             <h3>Future Improvements</h3>
                             <ul>
                                 <li>Integrate social features like follower systems and community groups</li>
-                                <li>Add real-time notifications for listings matching user interests</li>
+                                <li>Personalised alerts that match new listings to each student's interests</li>
                                 <li>Enable community-based groups tied to student accommodations</li>
                             </ul>
                         </div>

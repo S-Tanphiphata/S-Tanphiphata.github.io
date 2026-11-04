@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sakdiphat Tanphiphatari (Tan) - UX Researcher & Interaction Designer Portfolio">
+    <meta name="description" content="Portfolio of Sakdiphat (Tan) Tanphiphatari, a UX researcher, interaction designer and game developer based in Melbourne.">
     <meta name="author" content="Sakdiphat Tanphiphatari">
-    <title>My Portfolio: Sakdiphat Tanphiphatari</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sakdiphat Tanphiphatari">
+    <meta property="og:title" content="Sakdiphat Tanphiphatari - UX Designer &amp; Game Developer">
+    <meta property="og:description" content="Portfolio of Sakdiphat (Tan) Tanphiphatari, a UX researcher, interaction designer and game developer based in Melbourne.">
+    <meta property="og:url" content="https://s-tanphiphata.github.io/">
+    <meta property="og:image" content="https://s-tanphiphata.github.io/images/og/home.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Sakdiphat Tanphiphatari - UX Designer &amp; Game Developer</title>
     <script>
         (function () {
-            if (localStorage.getItem('theme') === 'dark') {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&amp;family=Inter:wght@400;500;600&amp;display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
@@ -46,7 +55,7 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -88,7 +97,7 @@
                     <li>
                         <a href="projects/xrtv.html" class="work-item">
                             <div class="work-item__media">
-                                <img src="images/thumbnails/thn01.png" alt="XRTV – Extended Reality Television" loading="lazy">
+                                <img src="images/thumbnails/thn01.webp" alt="XRTV – Extended Reality Television" loading="lazy">
                             </div>
                             <div class="work-item__body">
                                 <h4 class="work-item__title">XRTV – Extended Reality Television</h4>
@@ -110,7 +119,7 @@
                     <li>
                         <a href="projects/studentswap.html" class="work-item">
                             <div class="work-item__media">
-                                <img src="images/thumbnails/thn02.png" alt="StudentSwap – Student Items Exchange Platform" loading="lazy">
+                                <img src="images/thumbnails/thn02.webp" alt="StudentSwap – Student Items Exchange Platform" loading="lazy">
                             </div>
                             <div class="work-item__body">
                                 <h4 class="work-item__title">StudentSwap</h4>
@@ -138,7 +147,7 @@
                     <li>
                         <a href="projects/lightsout.html" class="work-item">
                             <div class="work-item__media">
-                                <img src="images/thumbnails/thng01.png" alt="Lights Out – Survival-Crafting Game" loading="lazy">
+                                <img src="images/thumbnails/thng01.webp" alt="Lights Out – Survival-Crafting Game" loading="lazy">
                             </div>
                             <div class="work-item__body">
                                 <h4 class="work-item__title">Lights Out</h4>
@@ -159,7 +168,7 @@
                     <li>
                         <a href="projects/chromatic-wizard.html" class="work-item">
                             <div class="work-item__media">
-                                <img src="images/thumbnails/Chromatic Wizard Thumbnail.png" alt="Chromatic Wizard – Color-Magic Wave Shooter" loading="lazy">
+                                <img src="images/thumbnails/chromatic-wizard-thumbnail.webp" alt="Chromatic Wizard – Color-Magic Wave Shooter" loading="lazy">
                             </div>
                             <div class="work-item__body">
                                 <h4 class="work-item__title">Chromatic Wizard</h4>
@@ -190,7 +199,7 @@
                 <h2 class="section-title">Hi, I'm Tan.</h2>
             </header>
             <div class="about-body">
-                <p class="about-lead">I'm a UX researcher and interaction designer based in Melbourne. I combine user research with hands-on prototyping to create meaningful experiences, from mixed reality apps to games.</p>
+                <p class="about-lead">I'm a UX researcher, interaction designer and game developer based in Melbourne. I combine user research with hands-on prototyping to create meaningful experiences, from mixed reality apps to games.</p>
 
                 <dl class="principles">
                     <div class="principles__row">
@@ -216,6 +225,7 @@
                     <li>Prototyping (Figma)</li>
                     <li>Mixed Reality (XR)</li>
                     <li>Unity Development</li>
+                    <li>Godot Development</li>
                     <li>Game Design</li>
                     <li>Arduino / ESP32</li>
                 </ul>

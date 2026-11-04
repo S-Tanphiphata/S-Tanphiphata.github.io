@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lights Out - Game design document for a survival-crafting game by Sakdiphat Tanphiphatari">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sakdiphat Tanphiphatari">
+    <meta property="og:title" content="Lights Out - Game Dev Project">
+    <meta property="og:description" content="Lights Out - Game design document for a survival-crafting game by Sakdiphat Tanphiphatari">
+    <meta property="og:url" content="https://s-tanphiphata.github.io/projects/lightsout.html">
+    <meta property="og:image" content="https://s-tanphiphata.github.io/images/og/lightsout.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Lights Out - Game Dev Project</title>
     <script>
         (function () {
-            if (localStorage.getItem('theme') === 'dark') {
+            var stored = localStorage.getItem('theme');
+            if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
         })();
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/gdd.css">
@@ -45,7 +56,7 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <button class="nav-toggle" aria-label="Toggle navigation">
+                <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -225,32 +236,32 @@
                     </div>
                     <div class="gdd-figures">
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc01.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc01.png" alt="Lights Out - Screenshot 1" loading="lazy"></a>
-                            <figcaption><span>FIG 01</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc01.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc01.webp" alt="Lights Out title screen with the Start Game button" loading="lazy"></a>
+                            <figcaption><span>FIG 01</span>Title screen</figcaption>
                         </figure>
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc02.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc02.png" alt="Lights Out - Screenshot 2" loading="lazy"></a>
-                            <figcaption><span>FIG 02</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc02.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc02.webp" alt="Player at the starting campfire, with resource counters, map progress, and sanity and stamina bars" loading="lazy"></a>
+                            <figcaption><span>FIG 02</span>Campfire start area with sanity and stamina bars</figcaption>
                         </figure>
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc03.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc03.png" alt="Lights Out - Screenshot 3" loading="lazy"></a>
-                            <figcaption><span>FIG 03</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc03.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc03.webp" alt="Player gathering wood and stone near the campfire" loading="lazy"></a>
+                            <figcaption><span>FIG 03</span>Gathering resources near the campfire</figcaption>
                         </figure>
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc04.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc04.png" alt="Lights Out - Screenshot 4" loading="lazy"></a>
-                            <figcaption><span>FIG 04</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc04.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc04.webp" alt="Player beside an ore deposit with the E - Collect Ore prompt" loading="lazy"></a>
+                            <figcaption><span>FIG 04</span>Interaction prompt for collecting ore</figcaption>
                         </figure>
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc05.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc05.png" alt="Lights Out - Screenshot 5" loading="lazy"></a>
-                            <figcaption><span>FIG 05</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc05.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc05.webp" alt="Crafting menu showing light sources such as the torch, campfire, street lamp and traffic light" loading="lazy"></a>
+                            <figcaption><span>FIG 05</span>Crafting menu: light sources, including the electric street lamp and traffic light</figcaption>
                         </figure>
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc06.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc06.png" alt="Lights Out - Screenshot 6" loading="lazy"></a>
-                            <figcaption><span>FIG 06</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc06.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc06.webp" alt="Thorny plants blocking a path" loading="lazy"></a>
+                            <figcaption><span>FIG 06</span>Thorn obstacle blocking the path</figcaption>
                         </figure>
                         <figure class="gdd-figure">
-                            <a href="../images/lightsout/sc07.png" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc07.png" alt="Lights Out - Screenshot 7" loading="lazy"></a>
-                            <figcaption><span>FIG 07</span>Lights Out screenshot</figcaption>
+                            <a href="../images/lightsout/sc07.webp" target="_blank" rel="noopener noreferrer"><img src="../images/lightsout/sc07.webp" alt="Thorny plants transforming as light reaches them" loading="lazy"></a>
+                            <figcaption><span>FIG 07</span>Thorns transforming as light touches them</figcaption>
                         </figure>
                     </div>
                 </section>
